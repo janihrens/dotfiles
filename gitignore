@@ -1,0 +1,14 @@
+.DS_Store
+.sass-cache
+*~
+#*
+.#*
+TAGS
+custom_plan.rb
+.classpath
+.project
+.projectile
+.settings
+*.iml
+.idea
+.clover
