@@ -314,13 +314,6 @@ this enables that.
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 #+END_SRC
 
-Include the =minted= package in all of my LaTeX exports.
-
-#+BEGIN_SRC emacs-lisp
-  (add-to-list 'org-latex-packages-alist '("" "minted"))
-  (setq org-latex-listings 'minted)
-#+END_SRC
-
 ** TeX configuration
 
 I rarely write LaTeX directly any more, but I often export through it with
