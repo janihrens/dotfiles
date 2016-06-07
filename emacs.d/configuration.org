@@ -1,5 +1,9 @@
 #+TITLE: Emacs configuration
 
+* Startup File
+;; This enables saving the current desktop on shutdown.
+(desktop-save-mode 1)
+
 * Use sensible-defaults.el
 
 Use [[https://github.com/hrs/sensible-defaults.el][sensible-defaults.el]] for some basic settings.
@@ -312,13 +316,6 @@ this enables that.
         '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
-#+END_SRC
-
-Include the =minted= package in all of my LaTeX exports.
-
-#+BEGIN_SRC emacs-lisp
-  (add-to-list 'org-latex-packages-alist '("" "minted"))
-  (setq org-latex-listings 'minted)
 #+END_SRC
 
 ** TeX configuration
