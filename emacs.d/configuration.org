@@ -1,5 +1,9 @@
 #+TITLE: Emacs configuration
 
+* Startup File
+;; This enables saving the current desktop on shutdown.
+(desktop-save-mode 1)
+
 * Use sensible-defaults.el
 
 Use [[https://github.com/hrs/sensible-defaults.el][sensible-defaults.el]] for some basic settings.
