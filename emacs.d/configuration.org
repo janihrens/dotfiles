@@ -281,6 +281,13 @@ Record the time that a todo was archived.
   (setq org-log-done 'time)
 #+END_SRC
 
+Follow links via Return
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-return-follows-link t)
+#+END_SRC
+
+
 **** Keybindings
 
 Bind a few handy keys.
