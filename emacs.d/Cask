@@ -36,6 +36,7 @@
 (depends-on "less-css-mode")
 (depends-on "markdown-mode")
 (depends-on "multi-term")
+(depends-on "multiple-cursors")
 (depends-on "muttrc-mode")
 (depends-on "org-bullets")
 (depends-on "ox-twbs")
