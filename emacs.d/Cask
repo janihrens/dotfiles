@@ -1,6 +1,8 @@
 (source gnu)
 (source melpa)
 
+
+(depends-on "imenu-anywhere")
 (depends-on "ag")
 (depends-on "auctex")
 (depends-on "cask")
