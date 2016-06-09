@@ -1,3 +1,4 @@
+(source gnu)
 (source melpa)
 
 (depends-on "ag")
@@ -40,11 +41,7 @@
 (depends-on "multiple-cursors")
 (depends-on "muttrc-mode")
 (depends-on "org-bullets")
-(depends-on "org-latex")
 (depends-on "ox-twbs")
-(depends-on "ox-latex")
-(depends-on "ox-html")
-(depends-on "ox-ascii")
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "paredit")

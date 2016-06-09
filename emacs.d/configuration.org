@@ -386,27 +386,6 @@ I'm usually actually in an org document.
               (setq TeX-master t)))
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp
-(setq org-export-latex-listings t)
-(add-to-list 'org-latex-classes
-          '("koma-article"
-	    "\\documentclass{scrartcl}"
-             ("\\section{%s}" . "\\section*{%s}")
-             ("\\subsection{%s}" . "\\subsection*{%s}")
-             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-(add-to-list 'org-latex-classes
-          '("org-article"
-	    "\\documentclass{article}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-#+END_SRC
-
-
 * Editing settings
 ** Always kill current buffer
 
