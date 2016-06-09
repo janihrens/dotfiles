@@ -41,6 +41,32 @@ I use =cask= and =pallet= for managing packages.
   (pallet-mode t)
 #+END_SRC
 
+* =evil-mode=
+
+# Use =evil=.
+
+# #+BEGIN_SRC emacs-lisp
+#   (evil-mode 1)
+# #+END_SRC
+
+# Enable =surround= everywhere.
+
+# #+BEGIN_SRC emacs-lisp
+#   (global-evil-surround-mode 1)
+# #+END_SRC
+
+# Bind =C-p= to fuzzy-finding files in the current project.
+
+# #+BEGIN_SRC emacs-lisp
+#   (define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
+# #+END_SRC
+
+* Helm mode
+ #+BEGIN_SRC emacs-lisp
+  (helm-mode 1)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+#+END_SRC
+
 * Utility functions
 
 Define a big ol' bunch of handy utility functions.
@@ -172,6 +198,12 @@ I don't usually use the menu or scroll bar, and they take up useful space.
 
 #+RESULTS:
 : t
+
+
+** use powerline
+   #+BEGIN_SRC emacs-lisp
+     (powerline-default-theme)
+   #+END_SRC
 
 
 ** Highlight the current line
@@ -354,6 +386,31 @@ I'm usually actually in an org document.
               (setq TeX-master t)))
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp
+(require 'org-latex)
+(require 'ox-latex)
+(setq org-export-latex-listings t)
+(add-to-list 'org-latex-classes
+          '("koma-article"
+	    "\\documentclass{scrartcl}
+              \\usepackage[utf8]{inputenc}\n\\usepackage[T1]{fontenc}\n
+\\usepackage{hyperref}\n"
+             ("\\section{%s}" . "\\section*{%s}")
+             ("\\subsection{%s}" . "\\subsection*{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+             ("\\paragraph{%s}" . "\\paragraph*{%s}")
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(add-to-list 'org-latex-classes
+          '("org-article"
+	    "\\documentclass{article}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+#+END_SRC
+
+
 * Editing settings
 ** Always kill current buffer
 
@@ -394,7 +451,7 @@ Just a few handy functions.
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-c M-m") 'mc/mark-all-like-this)
+  (global-set-key (kbd "C-S-c C-<") 'mc/mark-all-like-this)
 #+END_SRC
 
 #+RESULTS:
