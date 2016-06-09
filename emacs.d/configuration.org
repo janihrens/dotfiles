@@ -387,14 +387,10 @@ I'm usually actually in an org document.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-(require 'org-latex)
-(require 'ox-latex)
 (setq org-export-latex-listings t)
 (add-to-list 'org-latex-classes
           '("koma-article"
-	    "\\documentclass{scrartcl}
-              \\usepackage[utf8]{inputenc}\n\\usepackage[T1]{fontenc}\n
-\\usepackage{hyperref}\n"
+	    "\\documentclass{scrartcl}"
              ("\\section{%s}" . "\\section*{%s}")
              ("\\subsection{%s}" . "\\subsection*{%s}")
              ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
