@@ -430,7 +430,26 @@ Just a few handy functions.
   (global-set-key (kbd "C-;") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-S-c C-<") 'mc/mark-all-like-this)
   (global-set-key (kbd "C-.") 'er/expand-region)
+  (global-set-key (kbd "<f5>") 'occur)
+  (global-set-key (kbd "<f6>") 'flyspell-mode)
+  (global-set-key (kbd "<f9>") 'helm-imenu-anywhere)
+  (global-set-key (kbd "C-z") 'undo)
+
+
+  (setq py-python-command "python3")
 #+END_SRC
 
 #+RESULTS:
-: er/expand-region
+=python3
+==python3
+==python3
+==python3
+==python3
+==python3
+=* additions
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+#+END_SRC
+
+#+RESULTS:
