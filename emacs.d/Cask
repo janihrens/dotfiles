@@ -5,6 +5,7 @@
 (depends-on "imenu-anywhere")
 (depends-on "ag")
 (depends-on "auctex")
+(depends-on "buffer-stack")
 (depends-on "cask")
 (depends-on "chruby")
 (depends-on "cm-mode")

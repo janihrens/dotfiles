@@ -432,9 +432,15 @@ Just a few handy functions.
   (global-set-key (kbd "C-.") 'er/expand-region)
   (global-set-key (kbd "<f5>") 'occur)
   (global-set-key (kbd "<f6>") 'flyspell-mode)
-  (global-set-key (kbd "<f9>") 'helm-imenu-anywhere)
+  (global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
   (global-set-key (kbd "C-z") 'undo)
 
+(global-set-key [(f9)] 'buffer-stack-bury)
+(global-set-key [(control f9)] 'buffer-stack-bury-and-kill)
+(global-set-key [(f10)] 'buffer-stack-up)
+(global-set-key [(f11)] 'buffer-stack-down)
+(global-set-key [(f12)] 'buffer-stack-track)
+(global-set-key [(control f12)] 'buffer-stack-untrack)
 
   (setq py-python-command "python3")
 #+END_SRC
