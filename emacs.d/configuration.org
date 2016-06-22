@@ -423,6 +423,7 @@ Just a few handy functions.
   (global-set-key (kbd "C-x C-k") 'kill-region)
   (global-set-key (kbd "C-M-,") 'hippie-expand)
   (global-set-key (kbd "M-o") 'other-window)
+  (global-set-key (kbd "M-p") 'other-frame)
   (global-set-key (kbd "M-#") 'sort-lines)
   (global-set-key (kbd "C-c s") 'multi-term)
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
