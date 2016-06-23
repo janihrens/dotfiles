@@ -1,7 +1,12 @@
 (source gnu)
 (source melpa)
 
-
+(depends-on "auto-complete")
+(depends-on "ac-math")
+(depends-on "auto-complete-auctex")
+(depends-on "auto-complete-c-headers")
+(depends-on "flymake-google-cpplint")
+(depends-on "google-c-style")
 (depends-on "imenu-anywhere")
 (depends-on "ag")
 (depends-on "auctex")
