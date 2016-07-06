@@ -1,0 +1,26 @@
+# colors
+color listnormal_unread    green    default   bold
+color listfocus_unread      green     blue      bold
+color listfocus                   white     blue      bold
+
+# browser lynx
+
+
+# formatting
+text-width 85
+datetime-format "%d.%m.%Y, %R"
+
+# refresh feeds every 15 minutes
+auto-reload yes
+reload-time 15
+reload-threads 100
+
+# saving and bookmarking
+max-items 40
+save-path "~/.newsbeuter/Saved Articles/"
+bookmark-cmd "~/.newsbeuter/save_to_pocket/send-to-pocket.sh"
+
+# killfile
+ignore-article "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml  " "title =~ \"VIDEO\""
+ignore-article "http://slashdot.org/slashdot.rss" "title =~ \"Slashdot Asks\""
+

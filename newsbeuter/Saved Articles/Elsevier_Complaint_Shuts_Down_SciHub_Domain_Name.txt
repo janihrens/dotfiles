@@ -1,0 +1,78 @@
+Title: Elsevier Complaint Shuts Down Sci-Hub Domain Name
+Author: Ernesto
+Date: Wed, 04 May 2016 19:19:31 +0200
+Link: http://feedproxy.google.com/~r/Torrentfreak/~3/O0UzqDxvhjg/
+
+[image 1]Hoping to stop the unauthorized distribution of millions of academic 
+papers, academic publisher Elsevier filed a complaint against Sci-Hub and several 
+related sites last year. 
+
+While Sci-Hub is nothing like the average pirate site, it is just as illegal 
+according to Elsevier’s legal team, which obtained a preliminary injunction[2] from 
+a New York District Court last fall.
+
+The injunction ordered Sci-Hub’s operator to quit offering access to any Elsevier 
+content, but this didn’t happen. Instead of taking Sci-Hub down, the lawsuit and the
+associated media attention only helped the site grow. 
+
+However, as part of the injunction Elsevier is able to request domain name 
+registrars to suspend Sci-Hub’s domain names. This happened to the original .org 
+domain earlier, and a few days ago the Chinese registrar Now.cn appears to have done
+the same for Sci-hub.io.
+
+The domain name has stopped resolving and is now listed as “reserved” according to 
+the latest WHOIS info. TorrentFreak reached out to Sci-Hub founder Alexandra 
+Elbakyan, who informed us that the registrar sent her a notice referring to a 
+complaint from Elsevier.
+
+Message from the registrar
+[image 3]
+
+Elbakyan was also quick to add that several ‘backup’ domain names are still in play,
+including Sci-Hub.bz and Sci-Hub.cc. This means that the site remains accessible to 
+those who update their bookmarks.
+
+In addition to the alternative domain names users can access the site directly 
+through the IP-address 31.184.194.81, or its domain[4] on the Tor-network, which is 
+pretty much immune to any takedown efforts.
+
+[image 5]
+
+The Ukraine-born Elbakyan has no intention of throwing in the towel and believes 
+that what she does is helping millions of less privileged researchers[6] to do their
+work properly by providing free access to research results. 
+
+Authorized or not, there is definitely plenty of interest in Sci-Hub’s service. The 
+site currently hosts more than 51 million academic papers and receives millions of 
+visitors per month. 
+
+Many visits come from countries where access to academic journals is limited, such 
+as Iran, Russia or China. But even in countries where access is more common, many 
+researchers visit the site, an analysis from Science magazine revealed[7] last week.
+
+Elsevier says it is still deliberating what steps to take next. The publisher 
+recently informed the New York District Court that it’s researching what “potential 
+additional remedies” it can take against Sci-Hub and its operator.
+
+Meanwhile, academic pirates continue to flood to Sci-Hub, domain seizure or not.
+
+Source: TF[8], for the latest info on copyright, file-sharing, torrent sites[9] and 
+ANONYMOUS VPN services[10].
+[image 12][11][image 14][13][image 15]
+
+Links: 
+[1]: http://torrentfreak.com/images/200px-Elsevier.svg_.png (image)
+[2]: https://torrentfreak.com/court-orders-shutdown-of-libgen-bookfi-and-sci-hub-151102/ (link)
+[3]: http://torrentfreak.com/images/chinese.png (image)
+[4]: http://scihub22266oqcxt.onion (link)
+[5]: http://torrentfreak.com/images/sci-hub.jpg (image)
+[6]: https://torrentfreak.com/sci-hub-tears-down-academias-illegal-copyright-paywalls-150627/ (link)
+[7]: http://www.sciencemag.org/news/2016/04/whos-downloading-pirated-papers-everyone (link)
+[8]: https://torrentfreak.com/ (link)
+[9]: https://torrentfreak.com/top-10-most-popular-torrent-sites-of-2016-160102/ (link)
+[10]: https://torrentfreak.com/vpn-provider-anonymous-review-160220/ (link)
+[11]: http://feeds.feedburner.com/~ff/Torrentfreak?a=O0UzqDxvhjg:XaAPgGZpjPI:yIl2AUoC8zA (link)
+[12]: http://feeds.feedburner.com/~ff/Torrentfreak?d=yIl2AUoC8zA (image)
+[13]: http://feeds.feedburner.com/~ff/Torrentfreak?a=O0UzqDxvhjg:XaAPgGZpjPI:D7DqB2pKExk (link)
+[14]: http://feeds.feedburner.com/~ff/Torrentfreak?i=O0UzqDxvhjg:XaAPgGZpjPI:D7DqB2pKExk (image)
+[15]: http://feeds.feedburner.com/~r/Torrentfreak/~4/O0UzqDxvhjg (image)

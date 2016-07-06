@@ -187,15 +187,19 @@ I don't usually use the menu or scroll bar, and they take up useful space.
 #+END_SRC
 
 ** Custom solarized-dark themeCustom solarized-dark themeCustom solarized-dark theme
+# #+BEGIN_SRC emacs-lisp
+# (when window-system
+#   (setq solarized-use-variable-pitch nil)
+#   (setq solarized-height-plus-1 1.0)
+#   (setq solarized-height-plus-2 1.0)
+#   (setq solarized-height-plus-3 1.0)
+#   (setq solarized-height-plus-4 1.0)
+#   (setq solarized-high-contrast-mode-line t)
+#   (load-theme 'solarized-dark t))
+# #+END_SRC
+
 #+BEGIN_SRC emacs-lisp
-(when window-system
-  (setq solarized-use-variable-pitch nil)
-  (setq solarized-height-plus-1 1.0)
-  (setq solarized-height-plus-2 1.0)
-  (setq solarized-height-plus-3 1.0)
-  (setq solarized-height-plus-4 1.0)
-  (setq solarized-high-contrast-mode-line t)
-  (load-theme 'solarized-dark t))
+  (load-theme 'wombat t)
 #+END_SRC
 
 #+RESULTS:
@@ -527,3 +531,17 @@ Just a few handy functions.
 
   #+RESULTS:
   : t
+* unfill paragraph
+ #+BEGIN_SRC emacs-lisp
+ (defun unfill-paragraph (&optional region)
+      "Takes a multi-line paragraph and makes it into a single line of text."
+      (interactive (progn (barf-if-buffer-read-only) '(t)))
+      (let ((fill-column (point-max))
+            ;; This would override `fill-column' if it's an integer.
+            (emacs-lisp-docstring-fill-column t))
+        (fill-paragraph nil region)))
+ #+END_SRC
+
+ #+BEGIN_SRC emacs-lisp
+(define-key global-map "\M-Q" 'unfill-paragraph)
+ #+END_SRC

@@ -1,0 +1,101 @@
+Title: Pirates Frustrated After TV Release Groups Swap .MP4 for .MKV
+Author: Ernesto
+Date: Fri, 08 Apr 2016 21:28:07 +0200
+Link: http://feedproxy.google.com/~r/Torrentfreak/~3/ivvDd0RAXCg/
+
+[image 1]While pirates may not appear to be the most organized people, the groups 
+that make up the top of the piracy pyramid abide by strict rules[2].
+
+Every so often they agree on a new set of standards, which determine what a proper 
+release should look like. Most recently, new changes were announced for TV show 
+releases, and these are set to go into effect this coming weekend.
+
+The new rules are announced in lengthy documents, one for HD[3] and one for SD[4] 
+TV-releases.
+
+“Since the last revision of this document in 2012, TV-X264-SD has grown and become a
+major section that many people contribute to and depend on. This new revision aims 
+to update the standards from 2012 to standards suitable for 2016 and the future,” 
+the intro to the SD version reads. 
+
+The rules are intended for Scene groups only. These groups don’t share their work 
+directly to the public, but between themselves on so-called “topsites”. However, 
+most of the time their releases are also the source of TV-shows that end up being 
+shared on public pirate sites.
+
+This means that hundreds of million of people around the world will be affected by 
+the changes, albeit indirectly. 
+
+For the most part the rules deal with technicalities regarding release formatting, 
+tagging and various audio, subtitle and video settings. These changes are hardly 
+noticeable to outsiders, except for the “container” part.
+
+[image 5]
+
+Instead of using .MP4 as the file format, all releases will be .MKV moving forward. 
+This is the Matroska container[6] which has been the standard for HD releases in 
+recent years.
+
+Some groups have already made the switch over the past few days, causing confusion 
+among BitTorrent users. 
+
+“SUDDENLY everything (well many things) is MKV instead of MP4,” one downloader 
+writes, adding “There is no way a way a whole bunch of encoders woke up today and 
+suddenly decided to use MKV instead of MP4. Does anybody have any idea Whats going 
+on?”
+
+[image 7] Others complain about not being able to watch MKV files on their video 
+players, or branding MKV as inferior.
+
+“All I can figure is that since things were just fine the way they were, a couple of
+people decided to screw everything up for everyone else,” another frustrated TV fan 
+notes.
+
+Several P2P TV-distribution groups, which are not part of the Scene, were also taken
+by surprise. However, TorrentFreak is informed that they won’t convert their 
+releases to MP4, as some people have recommended. 
+
+Instead, the ETTV group advises TV-show downloaders to convert the videos to MP4 
+themselves if they want, pointing them to the free Rebox tool[8] that can do this in
+a few seconds.
+
+“SD tv shows will soon be released in mkv containers. If you’re an mp4 fan you can 
+remux the mkv files to mp4 in 2 simple steps in less than 30 seconds with the app 
+link below,” ETTV writes.
+
+[image 9]
+
+Interestingly, there were also massive complaints in 2012[10] when the SD standards 
+changed from .AVI to MP4. At the time some people were literally outraged, vowing to
+ban certain sites and groups. 
+
+Whether we will see a repeat of this backlash will become clear after April 10, when
+the rules go into effect.
+
+This time around it may not be as bad. Many video players support the MKV format and
+a lot of downloaders were already familiar with it, since HD shows have been 
+released this way for years.
+
+Source: TF[11], for the latest info on copyright, file-sharing, torrent sites[12] 
+and ANONYMOUS VPN services[13].
+[image 15][14][image 17][16][image 18]
+
+Links: 
+[1]: http://torrentfreak.com/images/crypirate.jpg (image)
+[2]: https://scenerules.org/ (link)
+[3]: http://torrentfreak.com/images/nfo-tvx2642k16.txt (link)
+[4]: http://torrentfreak.com/images/nfo-sdtvx2642k16.txt (link)
+[5]: http://torrentfreak.com/images/mkvcontainer.png (image)
+[6]: https://www.matroska.org/ (link)
+[7]: http://torrentfreak.com/images/mkvlogo.png (image)
+[8]: http://www.videohelp.com/software/rebox.NET (link)
+[9]: http://torrentfreak.com/images/ETTVcomment.png (image)
+[10]: https://torrentfreak.com/bittorrent-pirates-go-nuts-after-tv-release-groups-dump-xvid-120303/ (link)
+[11]: https://torrentfreak.com/ (link)
+[12]: https://torrentfreak.com/top-10-most-popular-torrent-sites-of-2016-160102/ (link)
+[13]: https://torrentfreak.com/vpn-provider-anonymous-review-160220/ (link)
+[14]: http://feeds.feedburner.com/~ff/Torrentfreak?a=ivvDd0RAXCg:ADtsvUO4H4o:yIl2AUoC8zA (link)
+[15]: http://feeds.feedburner.com/~ff/Torrentfreak?d=yIl2AUoC8zA (image)
+[16]: http://feeds.feedburner.com/~ff/Torrentfreak?a=ivvDd0RAXCg:ADtsvUO4H4o:D7DqB2pKExk (link)
+[17]: http://feeds.feedburner.com/~ff/Torrentfreak?i=ivvDd0RAXCg:ADtsvUO4H4o:D7DqB2pKExk (image)
+[18]: http://feeds.feedburner.com/~r/Torrentfreak/~4/ivvDd0RAXCg (image)
