@@ -12,7 +12,7 @@ ln -s ~/dotfiles/emacs.d ~/.emacs.d
 ln -s ~/dotfiles/i3 ~/.i3
 
 # qtcreator styles
-mdkir -p ~/.config/QtProject/qtcreator
+mkdir -p ~/.config/QtProject/qtcreator
 ln -s ~/dotfiles/qtcreator/styles ~/.config/QtProject/qtcreator/styles
 
 # newsbeuter

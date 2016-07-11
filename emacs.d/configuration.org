@@ -180,11 +180,13 @@ Note that this overrides the default font-related keybindings from
 I don't usually use the menu or scroll bar, and they take up useful space.
 
 #+BEGIN_SRC emacs-lisp
-  (tool-bar-mode t)
+  (tool-bar-mode -1)
   (menu-bar-mode t)
   (when window-system
     (scroll-bar-mode -1))
 #+END_SRC
+
+#+RESULTS:
 
 ** Custom solarized-dark themeCustom solarized-dark themeCustom solarized-dark theme
 # #+BEGIN_SRC emacs-lisp
@@ -220,8 +222,12 @@ pairing or presenting code.
 
 #+BEGIN_SRC emacs-lisp
   (when window-system
-    (global-hl-line-mode))
+     (global-hl-line-mode 1)
+(set-face-background 'hl-line "#330")
+(set-face-underline-p 'hl-line nil))
 #+END_SRC
+
+#+RESULTS:
 
 ** Hide certain modes from the modeline
 
