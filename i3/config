@@ -170,6 +170,17 @@ mode "$launcher" {
 set $launcher Launch: [c]hrome [e]macs [q]tcreator [f]irefox [t]hunderbird
 bindsym $mod+o mode "$launcher"
 
+mode "$keyboard" {
+     bindsym d exec setxkbmap de
+     bindsym e exec setxkbmap us
+
+     # back to normal: Enter or Escape
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+set $keyboard Keyboard layout: [d]eutsch [e]nglisch
+bindsym $mod+q mode "$keyboard"
+
 
 # workspace managment using numpad
 bindsym $mod+KP_1 workspace number 1
@@ -215,6 +226,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute s
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym $mod+End exec playerctl next
 bindsym $mod+Home exec playerctl previous
+
+
+
+
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
