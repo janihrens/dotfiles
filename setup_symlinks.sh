@@ -2,7 +2,7 @@
 
 # usage of ln: ln -s TARGET LINK
 
-# dropbox 
+# dropbox
 # googledrive
 
 # emacs
@@ -23,4 +23,4 @@ ln -s ~/dotfiles/newsbeuter ~/.config/newsbeuter
 mkdir -p ~/.config/sublime-text-3/Packages
 ln -s ~/dotfiles/sublimetext  ~/.config/sublime-text-3/Packages/User
 
-# 
+#

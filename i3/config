@@ -236,6 +236,6 @@ bindsym $mod+Home exec playerctl previous
 # finds out, if available)
 bar {
         # status_command i3status
-	status_command py3status -c ~/.i3/i3status.conf
+	status_command py3status -c ~/.i3/i3status.conf --include ~/.i3
         tray_output primary
 }
