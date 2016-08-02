@@ -17,7 +17,7 @@ class Py3status:
             # split information about wifi
             res = res.split()
             res = {
-                "security": res[-1],
+                "security": res[-1],  # could have more than one entry. care.
                 "bars": res[-2],
                 "signal": res[-3],
                 "rate": " ".join(res[-5:-3]),
@@ -25,16 +25,19 @@ class Py3status:
                 "mode": res[-7],
                 "ssid": " ".join(res[0:-7])
             }
-
             full_text = res["bars"] + " " + str(res["signal"]) + "% at " + res["ssid"]
+
+        except Exception as err:
+            full_text = 'down'
+
+        finally:
             cache_timeout = 10
             response = {
                 'full_text': full_text,
                 'cached_until': time() + cache_timeout
             }
             return response
-        except Exception as err:
-            print(err)
+
 
 if __name__ == "__main__":
     x = Py3status()
