@@ -16,15 +16,26 @@ class Py3status:
             res = " ".join(res[0][1:].split())
             # split information about wifi
             res = res.split()
+            refInd = res.index('Infra')
+            
             res = {
-                "security": res[-1],  # could have more than one entry. care.
-                "bars": res[-2],
-                "signal": res[-3],
-                "rate": " ".join(res[-5:-3]),
-                "channel": res[-6],
-                "mode": res[-7],
-                "ssid": " ".join(res[0:-7])
+                "security": res[refInd+5:],  # could have more than one entry. care.
+                "bars": res[refInd+5],
+                "signal": res[refInd+4],
+                "rate": " ".join(res[refInd+2:refInd+4]),
+                "channel": res[refInd+1],
+                "mode": res[refInd],
+                "ssid": " ".join(res[0:refInd])
             }
+#            res = {
+#                "security": res[-1],  # could have more than one entry. care.
+#                "bars": res[-2],
+#                "signal": res[-3],
+#                "rate": " ".join(res[-5:-3]),
+#                "channel": res[-6],
+#                "mode": res[-7],
+#                "ssid": " ".join(res[0:-7])
+#            }
             full_text = res["bars"] + " " + str(res["signal"]) + "% at " + res["ssid"]
 
         except Exception as err:
