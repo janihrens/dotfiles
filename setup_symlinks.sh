@@ -16,8 +16,9 @@ mkdir -p ~/.config/QtProject/qtcreator
 ln -s ~/dotfiles/qtcreator/styles ~/.config/QtProject/qtcreator/styles
 
 # newsbeuter
-mkdir -p ~/.config/newsbeuter
-ln -s ~/dotfiles/newsbeuter ~/.config/newsbeuter
+mkdir -p ~/.newsbeuter
+ln -s ~/dotfiles/newsbeuter ~/.newsbeuter
+ln -s ~/Dropbox/Sync/newsbeuter/cache.db ~/.newsbeuter/cache.db
 
 # sublime-text-3
 mkdir -p ~/.config/sublime-text-3/Packages
