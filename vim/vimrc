@@ -26,7 +26,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 Plugin 'ascenator/L9', {'name': 'newL9'}
-
+Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'sheerun/vim-wombat-scheme'
 Plugin 'https://github.com/vim-latex/vim-latex.git'
 "Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}

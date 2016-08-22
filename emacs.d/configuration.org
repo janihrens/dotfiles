@@ -444,7 +444,8 @@ Just a few handy functions.
   (global-set-key (kbd "<f5>") 'occur)
   (global-set-key (kbd "<f6>") 'flyspell-mode)
   (global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
-  (global-set-key (kbd "C-z") 'undo)
+  (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+  (global-set-key (kbd "C-b") 'helm-buffers-list)
 
 (global-set-key [(f9)] 'buffer-stack-bury)
 (global-set-key [(control f9)] 'buffer-stack-bury-and-kill)
@@ -458,6 +459,7 @@ Just a few handy functions.
 
 #+RESULTS:
 =python3
+==python3
 ==python3
 ==python3
 ==python3
