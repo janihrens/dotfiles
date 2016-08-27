@@ -3,8 +3,7 @@ color listnormal_unread    green    default   bold
 color listfocus_unread      green     blue      bold
 color listfocus                   white     blue      bold
 
-# browser lynx
-
+browser firefox
 
 # formatting
 text-width 85
