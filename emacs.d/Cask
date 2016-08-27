@@ -42,6 +42,7 @@
 (depends-on "ghc")
 (depends-on "gnuplot")
 (depends-on "graphviz-dot-mode")
+(depends-on "guide-key")
 (depends-on "haml-mode")
 (depends-on "helm")
 (depends-on "htmlize")

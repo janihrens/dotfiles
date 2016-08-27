@@ -6,6 +6,14 @@
 
 * my Settings
 
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-files "~/emacs/org/notes.org")
+#+END_SRC
+
+#+RESULTS:
+: ~/emacs/org/notes.org
+
+
 * Use sensible-defaults.el
 
 Use [[https://github.com/hrs/sensible-defaults.el][sensible-defaults.el]] for some basic settings.
@@ -268,6 +276,10 @@ package.
 * Publishing and task management with Org-mode
 ** Display preferences
 
+
+
+#+END_SRC
+
 I like to see an outline of pretty bullets instead of a list of asterisks.
 
 #+BEGIN_SRC emacs-lisp
@@ -466,6 +478,7 @@ Just a few handy functions.
 ==python3
 ==python3
 ==python3
+==python3
 =* additions
 
 #+BEGIN_SRC emacs-lisp
@@ -553,3 +566,13 @@ Just a few handy functions.
  #+BEGIN_SRC emacs-lisp
 (define-key global-map "\M-Q" 'unfill-paragraph)
  #+END_SRC
+* Guide Key
+#+BEGIN_SRC emacs-lisp
+  (require 'guide-key)
+  (setq guide-key/guide-key-sequence t)
+  (setq guide-key/popup-window-position 'top)
+  (guide-key-mode 1)
+#+END_SRC
+
+#+RESULTS:
+: t
