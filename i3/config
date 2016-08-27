@@ -11,6 +11,7 @@
 exec_always ~/setup_monitors.sh
 exec feh --bg-fill ~/Pictures/242424-2560x1440.png
 exec dropbox start
+exec nm-applet  # networkmanager applet
 
 set $mod Mod4
 
