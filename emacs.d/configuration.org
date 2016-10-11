@@ -9,7 +9,7 @@
 #+BEGIN_SRC emacs-lisp
 (load "server")
 (unless (server-running-p) (server-start))
-(set-face-attribute 'default nil :height 90)
+(set-face-attribute 'default nil :height 100)
  (setq org-agenda-files "~/emacs/org/notes.org")
 #+END_SRC
 
