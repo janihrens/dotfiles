@@ -10,7 +10,7 @@
 (load "server")
 (unless (server-running-p) (server-start))
 (set-face-attribute 'default nil :height 100)
- (setq org-agenda-files "~/emacs/org/notes.org")
+ (setq org-agenda-files '("~/emacs/org/"))
 #+END_SRC
 
 #+RESULTS:
