@@ -24,4 +24,7 @@ ln -s ~/Dropbox/Sync/newsbeuter/cache.db ~/.newsbeuter/cache.db
 mkdir -p ~/.config/sublime-text-3/Packages
 ln -s ~/dotfiles/sublimetext  ~/.config/sublime-text-3/Packages/User
 
-#
+# luakit
+ln -s ~/Dropbox/Sync/luakit ~/.local/share/luakit
+
+# vim

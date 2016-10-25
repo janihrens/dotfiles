@@ -2,9 +2,11 @@
 
 apt-get update
 # basic console applications
-apt-get -y install git curl lynx newsbeuter mc ranger glances imagemagick
+apt-get -y install git curl lynx newsbeuter mc ranger glances imagemagick gnuplot
+# luakit
+apt-get -y install luakit
 # text editors
-apt-get -y install emacs qtcreator kate
+apt-get -y install emacs qtcreator
 # python 3
 apt-get -y install python3-pip python3-numpy python3-scipy python3-matplotlib
 # python 2
@@ -14,12 +16,14 @@ apt-get -y install g++ openmpi-bin openmpi-doc libopenmpi-dev paraview
 # i3
 apt-get -y install i3 i3lock i3status i3-wm i3-wm-dbg
 pip3 install py3status
+# latex
+apt-get -y install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-base texlive-latex-base
 # boinc
-apt-get -y install boinc boinc-manager
+# apt-get -y install boinc boinc-manager
 # steam
-apt-get -y install steam
+# apt-get -y install steam
 # dropbox
-apt-get -y install dropbox
+apt-get -y install nautilus-dropbox
 # keepass
 apt-get -y install keepass2
 # media
