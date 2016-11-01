@@ -5,6 +5,7 @@
 # dropbox
 # googledrive
 
+
 # emacs
 ln -s ~/dotfiles/emacs.d ~/.emacs.d
 ln -s ~/Dropbox/Sync/Emacs ~/emacs
@@ -28,3 +29,6 @@ ln -s ~/dotfiles/sublimetext  ~/.config/sublime-text-3/Packages/User
 ln -s ~/Dropbox/Sync/luakit ~/.local/share/luakit
 
 # vim
+# abook
+mkdir ~/.abook
+ln -s ~/Dropbox/Sync/addressbook ~/.abook/addressbook
