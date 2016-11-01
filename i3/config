@@ -8,8 +8,9 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-exec_always ~/setup_monitors.sh
-exec feh --bg-fill ~/Pictures/242424-2560x1440.png
+#exec_always ~/setup_monitors.sh
+exec_always xrandr --output VGA-1 --auto --left-of DVI-0
+exec feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
 exec dropbox start
 exec nm-applet  # networkmanager applet
 

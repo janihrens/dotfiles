@@ -1,8 +1,12 @@
 #!/bin/sh
 
 apt-get update
+# dkms things -> kernel headers?
+apt-get -y install build-essential dkms rtl8812au-dkms
+# compilers and  code
+apt-get -y install make cmake gcc g++ exuberant-ctags git
 # basic console applications
-apt-get -y install git curl lynx newsbeuter mc ranger glances imagemagick gnuplot
+apt-get -y install curl lynx newsbeuter mc ranger glances imagemagick gnuplot
 # luakit
 apt-get -y install luakit
 # text editors
