@@ -553,9 +553,7 @@ Just a few handy functions.
     (global-semantic-idle-scheduler-mode 1)
   #+END_SRC
 
-  #+RESULTS:
-  : t
-* unfill paragraph
+
  #+BEGIN_SRC emacs-lisp
  (defun unfill-paragraph (&optional region)
       "Takes a multi-line paragraph and makes it into a single line of text."
