@@ -20,6 +20,7 @@ ln -s ~/dotfiles/qtcreator/styles ~/.config/QtProject/qtcreator/styles
 # newsbeuter
 ln -s ~/dotfiles/newsbeuter ~/.newsbeuter
 ln -s ~/Dropbox/Sync/newsbeuter/cache.db ~/.newsbeuter/cache.db
+ln -s ~/Dropbox/Sync/newsbeuter/urls ~/.newsbeuter/urls
 
 # sublime-text-3
 mkdir -p ~/.config/sublime-text-3/Packages
