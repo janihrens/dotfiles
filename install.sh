@@ -18,7 +18,7 @@ apt-get -y install python-pip python-numpy python-scipy python-matplotlib
 # MPI, openlb
 apt-get -y install g++ openmpi-bin openmpi-doc libopenmpi-dev paraview
 # i3
-apt-get -y install i3 i3lock i3status i3-wm i3-wm-dbg
+apt-get -y install i3 i3lock i3status i3-wm i3-wm-dbg feh
 pip3 install py3status
 # latex
 apt-get -y install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-base texlive-latex-base

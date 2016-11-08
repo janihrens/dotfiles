@@ -8,9 +8,14 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-#exec_always ~/setup_monitors.sh
-exec_always xrandr --output VGA-1 --auto --left-of DVI-0
+
+# setup displays
+# exec_always xrandr --output VGA-1 --auto --left-of DVI-0
+# set background
 exec feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
+
+# mount storage drive before starting dropbox
+exec gvfs-mount -d /dev/sdb5
 exec dropbox start
 exec nm-applet  # networkmanager applet
 
@@ -22,7 +27,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:DejaVu Sans Mono 6
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 8
 #font pango:Terminus 10px
-font pango:monospace 7
+font pango:monospace 8
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
