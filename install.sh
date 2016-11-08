@@ -6,7 +6,7 @@ apt-get -y install build-essential dkms rtl8812au-dkms
 # compilers and  code
 apt-get -y install make cmake gcc g++ exuberant-ctags git
 # basic console applications
-apt-get -y install curl lynx newsbeuter mc ranger glances imagemagick gnuplot abook
+apt-get -y install curl lynx newsbeuter mc ranger glances imagemagick gnuplot abook when
 # luakit
 apt-get -y install luakit
 # text editors
