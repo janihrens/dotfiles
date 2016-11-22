@@ -31,7 +31,7 @@ ln -s ~/Dropbox/Sync/luakit ~/.local/share/luakit
 
 # vim
 # abook
-ln -s ~/Dropbox/Sync/abook ~./abook
+ln -s ~/Dropbox/Sync/abook ~/.abook
 
 # when
 ln -s ~/Dropbox/Sync/when ~/.when
