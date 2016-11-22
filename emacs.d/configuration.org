@@ -417,11 +417,8 @@ Follow links via Return
 #+BEGIN_SRC emacs-lisp
 (setq projectile-keymap-prefix (kbd "C-c p"))
 (projectile-mode 1)
-<<<<<<< HEAD
 (add-to-list 'projectile-other-file-alist '("cpp" "hh"))
 (add-to-list 'projectile-other-file-alist '("hh" "h"))
-=======
->>>>>>> 8a91c4e9b563d7079b2f900475ada5d5952805ec
 #+END_SRC
 
 ** Exporting
@@ -516,10 +513,7 @@ Bind a few handy keys.
       (global-set-key (kbd "M-x") 'helm-M-x)
   (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-<<<<<<< HEAD
 (global-set-key (kbd "M-s o") 'helm-occur)
-=======
->>>>>>> 8a91c4e9b563d7079b2f900475ada5d5952805ec
           (global-set-key (kbd "C-w") 'backward-kill-word)
           (global-set-key (kbd "C-x C-k") 'kill-region)
           (global-set-key (kbd "C-,") 'hippie-expand)
@@ -560,10 +554,7 @@ Bind a few handy keys.
 ==python3
 ==python3
 ==python3
-<<<<<<< HEAD
 ==python3
-=======
->>>>>>> 8a91c4e9b563d7079b2f900475ada5d5952805ec
 =* additions
 
 #+BEGIN_SRC emacs-lisp
