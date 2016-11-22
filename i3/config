@@ -172,16 +172,19 @@ mode "resize" {
 mode "$launcher" {
         # These bindings trigger as soon as you enter the launcher mode
         bindsym c exec google-chrome
-        bindsym t exec thunderbird
         bindsym f exec firefox
+	bindsym m exec claws-mail
+	bindsym p exec evince
+	bindsym t exec thunderbird
 	bindsym e exec emacs
+	bindsym b exec qutebrowser
 	bindsym q exec "qtcreator --stylesheet=/home/jan/.config/QtProject/qtcreator/styles/wombat/stylesheet.css"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-set $launcher Launch: [c]hrome [e]macs [q]tcreator [f]irefox [t]hunderbird
+set $launcher Launch: qute[b]rowser claws-[m]ail [c]hrome [e]macs [q]tcreator [p]df-viewer [f]irefox [t]hunderbird
 bindsym $mod+o mode "$launcher"
 
 mode "$keyboard" {
@@ -224,7 +227,9 @@ bindsym $mod+Shift+KP_0 move container to workspace number 10
 # use xprop to find instance and class: WM_CLASS(STRING) = "Mail", "Thunderbird"
 assign [class="^Spotify$"] 10
 assign [class="^Thunderbird$"] 9
+assign [class="^Claws-mail$"] 9
 assign [class="^Paraview$"] 8
+
 
 workspace 1 output VGA-1
 workspace 2 output DVI-0
