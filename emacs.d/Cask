@@ -46,6 +46,7 @@
 (depends-on "guide-key")
 (depends-on "haml-mode")
 (depends-on "helm")
+(depends-on "helm-projectile")
 (depends-on "htmlize")
 (depends-on "ido-ubiquitous")
 (depends-on "ido-vertical-mode")
