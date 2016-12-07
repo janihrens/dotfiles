@@ -60,6 +60,7 @@
 (depends-on "multi-term")
 (depends-on "multiple-cursors")
 (depends-on "muttrc-mode")
+(depends-on "neotree")
 (depends-on "org-bullets")
 (depends-on "ox-twbs")
 (depends-on "package-build")
