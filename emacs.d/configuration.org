@@ -567,6 +567,24 @@ Bind a few handy keys.
 #+END_SRC
 
 #+RESULTS:
+* Compiling
+kill the comilation window when there were no errors
+#+BEGIN_SRC emacs-lisp
+; from enberg on #emacs
+(setq compilation-finish-function
+  (lambda (buf str)
+    (if (null (string-match ".*exited abnormally.*" str))
+        ;;no errors, make the compilation window go away in a few seconds
+        (progn
+          (run-at-time
+           "2 sec" nil 'delete-windows-on
+           (get-buffer-create "*compilation*"))
+          (message "No Compilation Errors!")))))
+#+END_SRC
+
+#+RESULTS:
+| lambda | (buf str) | (if (null (string-match .*exited abnormally.* str)) (progn (run-at-time 2 sec nil (quote delete-windows-on) (get-buffer-create *compilation*)) (message No Compilation Errors!))) |
+
 * C++ things
   stuff from [[https://github.com/byuksel][byuksel]]s emacs as a C/C++ Tutorial
   #+BEGIN_SRC emacs-lisp
