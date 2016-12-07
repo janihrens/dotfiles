@@ -1,8 +1,24 @@
 # colors
-color listnormal_unread    green    default   bold
-color listfocus_unread      green     blue      bold
-color listfocus                   white     blue      bold
-highlight article "^(Feed|Title|Author|Link|Date):" default default underline
+#color listnormal_unread green    default   bold
+#color listfocus_unread 	green	 blue      bold
+#color listfocus 	white    blue      bold
+
+# color element foreground background attribute
+color background         white 	 default
+color listnormal         white 	 default
+color listfocus	         white 	 black	 bold	#standout
+color info 	         yellow  black 	 bold 	#standout
+color listfocus_unread   white 	 black   bold 	#standout
+color listnormal_unread  white 	 default bold
+
+# highlights
+highlight article "^(Feed|Title|Link|Date|Author|Podcast Download URL|Links):.*$" cyan default
+highlight article "https?://[^ ]+" red default
+highlight article     "\\[image [0-9][0-9]*\\]"             color72  default  bold
+highlight article     ":.*\\(link\\)$"                      color72  default
+highlight article     ":.*\\(image\\)$"                     color72  default
+#highlight article     "^Podcast Download URL:.*" cyan default
+#highlight article "^(Feed|Title|Author|Link|Date):" default default underline
 
 
 browser qutebrowser %u
