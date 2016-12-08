@@ -12,4 +12,19 @@ custom_plan.rb
 *.iml
 .idea
 .clover
-urls
+newsbeuter/urls
+newsbeuter/history*
+configuration.el
+emacs.d/.*
+emacs.d/ac-comphist.dat
+emacs.d/bookmarks
+emacs.d/ede-projects.el
+emacs.d/eshell/
+emacs.d/projectile-bookmarks.eld
+emacs.d/projectile.cache
+emacs.d/semanticdb/
+emacs.d/session.10114bcc51a4a467a3147799139326928400000012820036
+i3/__pycache__/
+newsbeuter/Saved Articles/
+newsbeuter/cache.db
+newsbeuter/queue

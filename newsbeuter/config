@@ -5,24 +5,31 @@
 
 # color element foreground background attribute
 color background         white 	 default
-color listnormal         white 	 default
-color listfocus	         white 	 black	 bold	#standout
+color listnormal         color247 	 default
+color listfocus	         white 	 black	 	#standout
 color info 	         yellow  black 	 bold 	#standout
 color listfocus_unread   white 	 black   bold 	#standout
-color listnormal_unread  white 	 default bold
-
+color listnormal_unread  color253 	 default bold
+color article color247 default
 # highlights
 highlight article "^(Feed|Title|Link|Date|Author|Podcast Download URL|Links):.*$" cyan default
 highlight article "https?://[^ ]+" red default
 highlight article     "\\[image [0-9][0-9]*\\]"             color72  default  bold
+#highlight article "\\[.*\\]" color72 default bold
+highlight article "\\[[0-9]*\\]" color72 default bold
 highlight article     ":.*\\(link\\)$"                      color72  default
 highlight article     ":.*\\(image\\)$"                     color72  default
 #highlight article     "^Podcast Download URL:.*" cyan default
 #highlight article "^(Feed|Title|Author|Link|Date):" default default underline
 
-
+show-read-articles no
+show-read-feeds no
 browser qutebrowser %u
-macro y set browser "mpv %u"; open-in-browser ; set browser "qutebrowser %u"
+player mpv
+macro y set browser "mpv %u"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
+macro o open-in-browser ; toggle-article-read "read"
+macro i open-in-browser "http://www.imdb.com/find?q=%t"
+macro i open-in-browser "http://www.imdb.com/find?q=%t"
 # download-full-page yes
 # pager less %f
 
@@ -34,8 +41,9 @@ datetime-format "%d.%m.%Y, %R"
 
 # refresh feeds every 15 minutes
 auto-reload yes
+refresh-on-startup no
 reload-time 15
-reload-threads 100
+reload-threads 16
 
 # saving and bookmarking
 # max-items 40
