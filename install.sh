@@ -32,9 +32,19 @@ apt-get -y install nautilus-dropbox
 apt-get -y install keepass2
 # media
 apt-get -y install vlc livestreamer
+
+# playerctl from github
+PLAYERCTLRLS="https://api.github.com/repos/acrisci/playerctl/releases"
+DLURL=$(curl -s $PLAYERCTLRLS | grep browser_download_url | grep .deb | head -n 1 | cut -d '"' -f 4)
+wget $DLURL
+dpkg -i playerctl*.deb
+rm playerctl*.deb
+
 # chromium
-apt-get -y install chromium-browser
+# apt-get -y install chromium-browser
+
 # chrome, from http://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line
 apt-get -y install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome*.deb
+rm google-chrome*.deb
