@@ -26,7 +26,7 @@ show-read-articles no
 show-read-feeds no
 browser qutebrowser %u
 player mpv
-macro y set browser "mpv %u"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
+macro y set browser "mpv --no-terminal %u &"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
 macro o open-in-browser ; toggle-article-read "read"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
@@ -47,8 +47,8 @@ reload-threads 16
 
 # saving and bookmarking
 # max-items 40
-save-path "~/.newsbeuter/Saved Articles/"
-bookmark-cmd "~/.newsbeuter/save_to_pocket/send-to-pocket.sh"
+save-path "~/Dropbox/Sync/newsbeuter/Saved Articles/"
+bookmark-cmd "~/Dropbox/Sync/newsbeuter/send-to-pocket.sh"
 
 # killfile
 ignore-article "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml  " "title =~ \"VIDEO\""
