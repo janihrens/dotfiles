@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # setup displays
-exec_always xrandr --output VGA-1 --auto --right-of DVI-0
+exec_always xrandr --output VGA-1 --primary --auto --right-of DVI-0
 # set background
 exec feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
 
