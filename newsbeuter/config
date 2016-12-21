@@ -27,6 +27,7 @@ show-read-feeds no
 browser qutebrowser %u
 player mpv
 macro y set browser "mpv --no-terminal %u &"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
+macro e set browser "extractor %u"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
 macro o open-in-browser ; toggle-article-read "read"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
