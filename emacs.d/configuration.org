@@ -514,6 +514,7 @@ Bind a few handy keys.
       (global-set-key (kbd "C-x b") 'helm-mini)
     (global-set-key (kbd "C-x C-f") 'helm-find-files)
     (global-set-key (kbd "M-s o") 'helm-occur)
+    (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
               (global-set-key (kbd "C-w") 'backward-kill-word)
               (global-set-key (kbd "C-x C-k") 'kill-region)
               (global-set-key (kbd "C-,") 'hippie-expand)
@@ -546,6 +547,7 @@ Bind a few handy keys.
 
 #+RESULTS:
 =python3
+==python3
 ==python3
 ==python3
 ==python3
