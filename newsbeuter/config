@@ -31,7 +31,6 @@ macro e set browser "extractor %u"; open-in-browser ; set browser "firefox %u"; 
 macro o open-in-browser ; toggle-article-read "read"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
-
 # download-full-page yes
 # pager less %f
 
