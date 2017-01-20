@@ -24,12 +24,14 @@ highlight article     ":.*\\(image\\)$"                     color72  default
 
 show-read-articles no
 show-read-feeds no
-browser qutebrowser %u
+browser firefox %u
 player mpv
-macro y set browser "mpv --no-terminal %u &"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
+macro y set browser "mpv --no-terminal %u &"; open-in-browser ; set browser "firefox %u"; toggle-article-read "read"
+macro e set browser "extractor %u"; open-in-browser ; set browser "firefox %u"; toggle-article-read "read"
 macro o open-in-browser ; toggle-article-read "read"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
+
 # download-full-page yes
 # pager less %f
 
