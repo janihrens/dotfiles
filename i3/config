@@ -126,7 +126,7 @@ bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 bindsym $mod+n workspace next_on_output
 bindsym $mod+p workspace prev_on_output
-bindsym $mod+b workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
 
 
 # move focused container to workspace
@@ -235,11 +235,12 @@ assign [class="^Thunderbird$"] 9
 assign [class="^Claws-mail$"] 9
 assign [class="^Paraview$"] 8
 
+for_window [instance="guake"] floating enable
 
-workspace 1 output VGA-1
-workspace 2 output DVI-0
-workspace 9 output DVI-0
-workspace 10 output DVI-0
+# workspace 1 output VGA-1
+# workspace 2 output DVI-0
+# workspace 9 output DVI-0
+# workspace 10 output DVI-0
 
 
 # Pulse Audio controls
