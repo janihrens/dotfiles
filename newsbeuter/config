@@ -52,5 +52,6 @@ save-path "~/Dropbox/Sync/newsbeuter/Saved Articles/"
 bookmark-cmd "~/Dropbox/Sync/newsbeuter/send-to-pocket.sh"
 
 # killfile
+
 ignore-article "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml  " "title =~ \"VIDEO\""
 ignore-article "http://slashdot.org/slashdot.rss" "title =~ \"Slashdot Asks\""

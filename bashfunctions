@@ -316,8 +316,17 @@ amazon() {
     for term in $*; do
         search="$search%20$term"
     done
-    xdg-open "http://www.amazon.co.uk/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=$search&x=0&y=0"
+    xdg-open "http://www.amazon.de/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=$search&x=0&y=0"
 }
+
+# search wolframalpha.com
+wa() {
+    search="$(tr $*)"
+
+    xdg-open "http://www.wolframalpha.com/input/?i=$search"
+}
+
+
 
 # Dictionary | Usage define <foo>
 define() {
