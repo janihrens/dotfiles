@@ -53,10 +53,6 @@ cd() {
   fi
 }
 
-aurctl(){
-          curl -s https://aur.archlinux.org/packages/"${1:0:2}/$1/$1".tar.gz | tar xz
-      }
-
 #pb pastebin || Usage: 'command | pb or  pb filename'
 pb () {
   curl -F "c=@${1:--}" https://ptpb.pw/
@@ -102,11 +98,6 @@ listd() {
 		find $HOME/.config/systemd/user -mindepth 1 -type d | xargs ls -gG --color)
 }
 
-# fix zsh annoying history behavior
-h() {
-     if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi;
- }
-
 #cd to dir of defined file | Usage: cdf <file>
 cdf () {
   cd "$(dirname "$(locate -i "$*" | head -n 1)")" ;
@@ -114,44 +105,39 @@ cdf () {
 
 #wego weather function## | usage wttr `city`
 wttr () {
-curl http://wttr.in/$1
+    curl http://wttr.in/$1
 }
 
 #web search tool | Usage: gsearch <value>
 function gsearch {
-Q="$@";
-GOOG_URL='https://www.google.co.uk/search?tbs=li:1&q=';
-AGENT="Mozilla/4.0";
-stream=$(curl -A "$AGENT" -skLm 20 "${GOOG_URL}${Q//\ /+}" | grep -oP '\/url\?q=.+?&amp' | sed 's|/url?q=||; s|&amp||');
-echo -e "${stream//\%/\x}";
+    Q="$@";
+    GOOG_URL='https://www.google.co.uk/search?tbs=li:1&q=';
+    AGENT="Mozilla/4.0";
+    stream=$(curl -A "$AGENT" -skLm 20 "${GOOG_URL}${Q//\ /+}" | grep -oP '\/url\?q=.+?&amp' | sed 's|/url?q=||; s|&amp||');
+    echo -e "${stream//\%/\x}";
 }
 
 #Convert to .mp4 | Usage: ipod5g foo.mpg
 ipod5g () {
-HandBrakeCLI -i "$1" -o "${1%.*}.ipod5g.mp4" --preset="iPod"
-}
-
-#List Realtime Soccer Results | Usage: score
-score() {
- watch -n10 --no-title "w3m http://www.livescore.com/ |awk '/live [0-9H]+[^ ]/,/red cards/'" ;
+    HandBrakeCLI -i "$1" -o "${1%.*}.ipod5g.mp4" --preset="iPod"
 }
 
 #Is server up ? | Usage: down4me <www.foo.com>
 down4me() {
-curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g';
+    curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g';
 }
 
 #Sprunge Paste | Usage: sprunge <file>
 function sprunge() {
   if (($#)); then
-if [[ -f $1 && -r $1 ]]; then
-curl -F 'sprunge=<-' http://sprunge.us < "$1"
-    else
-printf 'file %s does not exist or is not readable\n' "$1" >&2
-      return 1
-    fi
-else
-curl -F 'sprunge=<-' http://sprunge.us
+      if [[ -f $1 && -r $1 ]]; then
+	  curl -F 'sprunge=<-' http://sprunge.us < "$1"
+      else
+	  printf 'file %s does not exist or is not readable\n' "$1" >&2
+	  return 1
+      fi
+  else
+      curl -F 'sprunge=<-' http://sprunge.us
   fi
 }
 
@@ -197,8 +183,22 @@ echo "---------------------------------------------------"
 }
 
 #Transfer/share any file 5GB limit | Usage: transfer ~/foo/bar
-transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }; alias transfer=transfer
+transfer() {
+    if [ $# -eq 0 ]; then
+	echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"
+	return 1
+    fi
+    tmpfile=$( mktemp -t transferXXX )
+    if tty -s; then
+	basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
+	curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile
+    else
+	curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile
+    fi
+    cat $tmpfile
+    rm -f $tmpfile
+}
+alias transfer=transfer
 
 # copy | Usage: copy /source/file /destination/file
 copy() {
@@ -233,7 +233,7 @@ mkcd() {
 
 #Search files & directories | Usage: search <file/dirs>
 search() {
-find . -iname "*$@*" | less;
+    find . -iname "*$@*" | less;
 }
 
 #Grep process | Usage: psgrep <process>
