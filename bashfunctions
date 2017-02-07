@@ -13,7 +13,7 @@
 
 alias greppdf="pdfgrep --ignore-case --page-number --perl-regexp --with-filename"
 alias lk="ls -alh"
-
+alias bman='man --html=firefox'
 
 ## WIKIPEDIA SEARCH FUNCTION ##
 wikipediaSearch() {
@@ -202,8 +202,10 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 
 # copy | Usage: copy /source/file /destination/file
 copy() {
-    size=$(stat -c%s $1)
-    dd if=$1 &> /dev/null | pv -petrb -s $size | dd of=$2
+    infile="$1"
+    outfile="$2"
+    size=$(stat -c%s $infile)
+    dd if=$infile | pv -petrb -s $size | dd of=$outfile
 }
 
 # Run a command x times | Usage: runx <value>
@@ -310,7 +312,7 @@ pleer() {
     xdg-open "https://pleer.com/search?q=$search"
 }
 
-# Amazon UK search bash function  | Usage: amazon <foo>
+# Amazon DE search bash function  | Usage: amazon <foo>
 amazon() {
     search=""
     for term in $*; do
@@ -321,7 +323,8 @@ amazon() {
 
 # search wolframalpha.com
 wa() {
-    search="$(tr $*)"
+    search="$*"
+    search="$(echo "$search" | tr '+' '%2B')"
 
     xdg-open "http://www.wolframalpha.com/input/?i=$search"
 }
