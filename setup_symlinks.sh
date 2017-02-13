@@ -37,4 +37,7 @@ ln -s ~/Dropbox/Sync/abook ~/.abook
 ln -s ~/Dropbox/Sync/when ~/.when
 
 # urxvt
-ln -s ~/dotfiles/urxvt/Xresources .Xresources
+ln -s ~/dotfiles/urxvt/Xresources ~/.Xresources
+
+# zsh
+ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
