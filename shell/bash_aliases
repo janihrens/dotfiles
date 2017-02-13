@@ -1,0 +1,21 @@
+alias greppdf='pdfgrep --ignore-case --page-number --perl-regexp --with-filename'
+alias bman='man --html=firefox'
+alias myip='curl ifconfig.me/ip'
+alias ec="emacsclient -n"
+
+# Move dirs
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Don't show groups on long listing
+alias ll='ls -lG --color'     # long listing
+alias la='ls -lGa --color'    #              with hidden
+alias lt='ls -ltG --color'    #              sorted by latest changed
+alias lh='ls -lSGh --color'     # long listing sorted by humanreadable size
+
+# grep with color
+alias grep='grep --color'
+
+# reload
+alias reload='. ~/.bashrc'
