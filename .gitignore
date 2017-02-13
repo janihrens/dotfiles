@@ -17,6 +17,7 @@ custom_plan.rb
 configuration.el
 /emacs.d/.*
 /emacs.d/ac-comphist.dat
+/emacs.d/recentf
 /emacs.d/bookmarks
 /emacs.d/ede-projects.el
 /emacs.d/eshell/
