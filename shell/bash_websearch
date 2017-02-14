@@ -1,0 +1,110 @@
+#!/bin/bash
+
+# Google images search bash function  | Usage: images <foo>
+images() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://www.google.de/search?tbm=isch&hl=en&source=hp&biw=1366&bih=679&q=$search"
+}
+
+google() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://www.google.de/search?q=$search"
+}
+
+
+# YouTube search bash function  | Usage: videos <foo>
+videos() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://www.youtube.com/results?search_query=$search"
+}
+
+# DuckDuckGo search bash function  | Usage: ddg <foo>
+ddg() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://duckduckgo.com/?q=$search"
+}
+
+# Wikipedia English search bash function   | Usage: wiki <foo>
+wiki() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://en.wikipedia.org/w/index.php?search=$search"
+}
+
+# Android Play Store search bash function | Usage: android <foo>
+android() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://play.google.com/store/search?q=$search"
+}
+
+# Soundcloud music bash search function  | Usage: soundcloud <foo>
+soundcloud() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "https://soundcloud.com/search?q=$search"
+}
+
+# StackOverflow bash search function  | Usage: so <foo>
+so() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    w3m "http://stackoverflow.com/search?q=$search"
+}
+
+# Pleer music bash search function  | Usage: pleer <foo>
+pleer() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "https://pleer.com/search?q=$search"
+}
+
+# Amazon DE search bash function  | Usage: amazon <foo>
+amazon() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "http://www.amazon.de/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=$search&x=0&y=0"
+}
+
+# search wolframalpha.com
+# wa() {
+#     search="$*"
+#     search="$(echo "$search" | tr '+' '%2B')"
+
+#     xdg-open "http://www.wolframalpha.com/input/?i=$search"
+# }
+
+
+
+# Dictionary | Usage define <foo>
+define() {
+    curl -s dict://dict.org/d:$1 | grep -v '^[0-9]'
+}
+
+cmdfu() { curl "http://www.commandlinefu.com/commands/matching/$(echo "$@" \
+	| sed 's/ /-/g')/$(echo -n $@ | base64)/plaintext" ;
+}
