@@ -81,22 +81,12 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias ec="emacsclient -n"
-alias zshconfig="emacsclient -n ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias -s tex="emacsclient -n"
-alias -s cpp="emacsclient -n"
-alias -s h="emacsclient -n"
-alias -s hh="emacsclient -n"
-alias -s py="emacsclient -n"
-alias -s pdf=evince
-alias -s html=firefox
-
-alias -g L="|less"
-alias -g pipe="|"  # this is needed because of keyboard layout
-alias -g redirect=">"  # this is needed because of keyboard layout
 
 
 #hash -d down=~/Downloads"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f ~/dotfiles/shell/bash_utility_functions ] && source ~/dotfiles/shell/bash_utility_functions
+[ -f ~/dotfiles/shell/bash_aliases ] && source ~/dotfiles/shell/bash_aliases
+[ -f ~/dotfiles/shell/zsh_aliases ] && source ~/dotfiles/shell/zsh_aliases

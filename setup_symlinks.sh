@@ -40,4 +40,6 @@ ln -s ~/Dropbox/Sync/when ~/.when
 ln -s ~/dotfiles/urxvt/Xresources ~/.Xresources
 
 # zsh
-ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/dotfiles/shell/zshrc ~/.zshrc
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
