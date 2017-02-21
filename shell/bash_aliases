@@ -2,11 +2,11 @@ alias greppdf='pdfgrep --ignore-case --page-number --perl-regexp --with-filename
 alias bman='man --html=firefox'
 alias myip='curl ifconfig.me/ip'
 alias ec="emacsclient -n"
-alias agud="sudo apt update"
+alias agud="sudo apt-get update"
 alias aglu="apt list --upgradable"
-alias agug="sudo apt upgrade"
-alias ags="apt search"
-alias agi="sudo apt install"
+alias agug="sudo apt-get upgrade"
+alias ags="apt-cache search"
+alias agi="sudo apt-get install"
 
 # Move dirs
 alias ..='cd ..'
