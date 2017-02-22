@@ -8,9 +8,10 @@ apt-get -y install make cmake gcc g++ exuberant-ctags git
 # basic console applications
 apt-get -y install curl lynx newsbeuter mc ranger glances imagemagick gnuplot abook when rxvt-unicode
 # luakit
+apt-get -y install surfraw
 # apt-get -y install luakit
 # text editors
-apt-get -y install emacs qtcreator
+apt-get -y install emacs qtcreator vim
 # python 3
 apt-get -y install python3-pip python3-numpy python3-scipy python3-matplotlib
 # python 2
