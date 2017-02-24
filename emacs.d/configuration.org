@@ -422,8 +422,9 @@ Follow links via Return
 #+BEGIN_SRC emacs-lisp
 (setq projectile-keymap-prefix (kbd "C-c p"))
 (projectile-mode 1)
-(add-to-list 'projectile-other-file-alist '("cpp" "hh"))
-(add-to-list 'projectile-other-file-alist '("hh" "h"))
+(add-to-list 'projectile-other-file-alist '("cpp" "hh" "h"))
+(add-to-list 'projectile-other-file-alist '("hh" "h" "cpp"))
+(add-to-list 'projectile-other-file-alist '("h" "hh" "cpp"))
 #+END_SRC
 
 ** Exporting
@@ -516,6 +517,7 @@ Bind a few handy keys.
   ;;; helm related key chords
   (global-set-key (kbd "C-b") 'helm-buffers-list)
   (global-set-key (kbd "C-c h g") 'helm-google-suggest)
+  (global-set-key (kbd "C-c p a") 'helm-projectile-find-other-file)
   (global-unset-key (kbd "C-c h M-s o")) ;; unset complicated helm-occur command
   (global-set-key (kbd "C-c h o") 'helm-occur)
   (global-set-key (kbd "C-c h x") 'helm-registers)
@@ -526,6 +528,7 @@ Bind a few handy keys.
   (global-set-key (kbd "M-s o") 'helm-occur)
   (global-set-key (kbd "M-x") 'helm-M-x)
   (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
   ;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
 #+END_SRC
 
