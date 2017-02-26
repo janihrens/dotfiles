@@ -1,20 +1,15 @@
 #+TITLE: Emacs configuration
 
-* Startup File
-;; This enables saving the current desktop on shutdown.
-(desktop-save-mode 1)
-
 * my Settings
-
 #+BEGIN_SRC emacs-lisp
 (load "server")
 (unless (server-running-p) (server-start))
 ;(set-face-attribute 'default nil :height 100)
-(set-face-attribute 'default t :font "DejaVu sans-8" )
+; (set-face-attribute 'default t :font "DejaVu sans-8" )
+;; This enables saving the current desktop on shutdown.
+;; It will promt however and ask for a storage location
+;(desktop-save-mode 1)
 #+END_SRC
-
-#+RESULTS:
-: ~/emacs/org/notes.org
 
 * org custom agenda
 #+BEGIN_SRC emacs-lisp
@@ -210,25 +205,12 @@ presenting). These functions and bindings let me resize everything all together!
 Note that this overrides the default font-related keybindings from
 =sensible-defaults=.
 
-#+BEGIN_SRC emacs-lisp** Set default font and configure font resizing
-
-I'm partial to Inconsolata. I think a bigger size looks better on a Mac
-(especially since I'm usually using a large display when I'm on a Mac).
-
-The standard =text-scale-= functions just resize the text in the current buffer;
-I'd generally like to resize the text in /every/ buffer, and I usually want to
-change the size of the modeline, too (this is especially helpful when
-presenting). These functions and bindings let me resize everything all together!
-
-Note that this overrides the default font-related keybindings from
-=sensible-defaults=.
-
 #+BEGIN_SRC emacs-lisp
-  ;  (setq hrs/default-font "Inconsolata")
-  ; (setq hrs/default-font "DejaVu-sans")
-  ;  (setq hrs/default-font-size 8)
-  ;  (setq hrs/current-font-size hrs/default-font-size)
-  ;  (setq hrs/font-change-increment 1.1)
+;    (setq hrs/default-font "Inconsolata")
+;  (setq hrs/default-font "DejaVu-sans")
+;    (setq hrs/default-font-size 8)
+;    (setq hrs/current-font-size hrs/default-font-size)
+;    (setq hrs/font-change-increment 1.1)
 
     (defun hrs/set-font-size ()
       "Set the font to `hrs/default-font' at `hrs/current-font-size'."
@@ -526,6 +508,7 @@ Using the Menu key
   ;; TODO: separate projectile related hotkeys?
       (global-set-key (kbd "C-b") 'helm-buffers-list)
        (global-set-key (kbd "C-c h g") 'helm-google-suggest)
+;; overloading the default of projectile minor mode
   (define-key projectile-mode-map (kbd "C-c p a") 'helm-projectile-find-other-file)
        (global-unset-key (kbd "C-c h M-s o")) ;; unset complicated helm-occur command
        (global-set-key (kbd "C-c h o") 'helm-occur)
