@@ -43,3 +43,6 @@ ln -s ~/dotfiles/urxvt/Xresources ~/.Xresources
 ln -s ~/dotfiles/shell/zshrc ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+sudo pip install "jrnl[encrypted]"
+ln -s ~/Dropbox/Sync/jrnl/jrnl_config .jrnl_config
