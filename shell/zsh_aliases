@@ -6,11 +6,11 @@ alias ohmyzsh="emacsclient -n ~/.oh-my-zsh"
 ### default launch application by suffix
 # emacs for text
 alias -s tex="emacsclient -n"
-alias -s sh="emacsclient -n"
+# alias -s sh="emacsclient -n"
 alias -s cpp="emacsclient -n"
 alias -s h="emacsclient -n"
 alias -s hh="emacsclient -n"
-alias -s py="emacsclient -n"
+# alias -s py="emacsclient -n"
 alias -s txt="emacsclient -n"
 
 # video
@@ -27,3 +27,5 @@ alias -s html=firefox
 alias -g L="|less"
 alias -g pipe="|"  # this is needed because of keyboard layout
 alias -g redirect=">"  # this is needed because of keyboard layout
+
+alias reload='source ~/.zshrc'
