@@ -1,20 +1,15 @@
 #+TITLE: Emacs configuration
 
-* Startup File
-;; This enables saving the current desktop on shutdown.
-(desktop-save-mode 1)
-
 * my Settings
-
 #+BEGIN_SRC emacs-lisp
 (load "server")
 (unless (server-running-p) (server-start))
 ;(set-face-attribute 'default nil :height 100)
-(set-face-attribute 'default t :font "DejaVu sans-8" )
+; (set-face-attribute 'default t :font "DejaVu sans-8" )
+;; This enables saving the current desktop on shutdown.
+;; It will promt however and ask for a storage location
+;(desktop-save-mode 1)
 #+END_SRC
-
-#+RESULTS:
-: ~/emacs/org/notes.org
 
 * org custom agenda
 #+BEGIN_SRC emacs-lisp
@@ -210,25 +205,12 @@ presenting). These functions and bindings let me resize everything all together!
 Note that this overrides the default font-related keybindings from
 =sensible-defaults=.
 
-#+BEGIN_SRC emacs-lisp** Set default font and configure font resizing
-
-I'm partial to Inconsolata. I think a bigger size looks better on a Mac
-(especially since I'm usually using a large display when I'm on a Mac).
-
-The standard =text-scale-= functions just resize the text in the current buffer;
-I'd generally like to resize the text in /every/ buffer, and I usually want to
-change the size of the modeline, too (this is especially helpful when
-presenting). These functions and bindings let me resize everything all together!
-
-Note that this overrides the default font-related keybindings from
-=sensible-defaults=.
-
 #+BEGIN_SRC emacs-lisp
-  ;  (setq hrs/default-font "Inconsolata")
-  ; (setq hrs/default-font "DejaVu-sans")
-  ;  (setq hrs/default-font-size 8)
-  ;  (setq hrs/current-font-size hrs/default-font-size)
-  ;  (setq hrs/font-change-increment 1.1)
+;    (setq hrs/default-font "Inconsolata")
+;  (setq hrs/default-font "DejaVu-sans")
+;    (setq hrs/default-font-size 8)
+;    (setq hrs/current-font-size hrs/default-font-size)
+;    (setq hrs/font-change-increment 1.1)
 
     (defun hrs/set-font-size ()
       "Set the font to `hrs/default-font' at `hrs/current-font-size'."
@@ -416,16 +398,6 @@ Follow links via Return
   (setq org-return-follows-link t)
 #+END_SRC
 
-
-* Projectile
-
-#+BEGIN_SRC emacs-lisp
-(setq projectile-keymap-prefix (kbd "C-c p"))
-(projectile-mode 1)
-(add-to-list 'projectile-other-file-alist '("cpp" "hh"))
-(add-to-list 'projectile-other-file-alist '("hh" "h"))
-#+END_SRC
-
 ** Exporting
 
 **** Exporting to PDF
@@ -471,6 +443,16 @@ I'm usually actually in an org document.
               (setq TeX-master t)))
 #+END_SRC
 
+
+* Projectile
+
+#+BEGIN_SRC emacs-lisp
+    (setq projectile-keymap-prefix (kbd "C-c p"))
+  (projectile-mode 1)
+    (add-to-list 'projectile-other-file-alist '("cpp" "hh" "h"))
+    (add-to-list 'projectile-other-file-alist '("hh" "h" "cpp"))
+    (add-to-list 'projectile-other-file-alist '("h" "hh" "cpp"))
+#+END_SRC
 * Editing settings
 ** Always kill current buffer
 
@@ -511,22 +493,35 @@ Bind a few handy keys.
 #+RESULTS:
 : mark-done-and-archive
 
+Using the Menu key
+#+BEGIN_SRC emacs-lisp
+  ;; on Linux, the menu/apps key syntax is <menu>
+  ;; on Windows, the menu/apps key syntax is <apps>
+  ;; make the syntax equal
+  (define-key key-translation-map (kbd "<apps>") (kbd "<menu>"))
+       (global-set-key (kbd "<menu>") 'helm-M-x)
+#+END_SRC
+
 
 #+BEGIN_SRC emacs-lisp
-  ;;; helm related key chords
-  (global-set-key (kbd "C-b") 'helm-buffers-list)
-  (global-set-key (kbd "C-c h g") 'helm-google-suggest)
-  (global-unset-key (kbd "C-c h M-s o")) ;; unset complicated helm-occur command
-  (global-set-key (kbd "C-c h o") 'helm-occur)
-  (global-set-key (kbd "C-c h x") 'helm-registers)
-  (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-  (global-set-key (kbd "C-x C-f") 'helm-find-files)
-  (global-set-key (kbd "C-x b") 'helm-mini)
-  (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
-  (global-set-key (kbd "M-s o") 'helm-occur)
-  (global-set-key (kbd "M-x") 'helm-M-x)
-  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-  ;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
+       ;;; helm related key chords
+  ;; TODO: separate projectile related hotkeys?
+      (global-set-key (kbd "C-b") 'helm-buffers-list)
+       (global-set-key (kbd "C-c h g") 'helm-google-suggest)
+;; overloading the default of projectile minor mode
+  (define-key projectile-mode-map (kbd "C-c p a") 'helm-projectile-find-other-file)
+       (global-unset-key (kbd "C-c h M-s o")) ;; unset complicated helm-occur command
+       (global-set-key (kbd "C-c h o") 'helm-occur)
+       (global-set-key (kbd "C-c h x") 'helm-registers)
+       (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+       (global-set-key (kbd "C-x C-f") 'helm-find-files)
+       (global-set-key (kbd "C-x b") 'helm-mini)
+       (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
+       (global-set-key (kbd "M-s o") 'helm-occur)
+       (global-set-key (kbd "M-x") 'helm-M-x)
+       (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+       ;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp

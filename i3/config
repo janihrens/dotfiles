@@ -50,7 +50,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec i3lock --color=242424
 # kill focused window
 bindsym $mod+Shift+q kill
 
