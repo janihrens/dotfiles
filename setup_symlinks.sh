@@ -46,3 +46,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 sudo pip install "jrnl[encrypted]"
 ln -s ~/Dropbox/Sync/jrnl/jrnl_config .jrnl_config
+
+sudo pip3 install "topydo"
+sudo pip3 install "topydo[columns]"
+sudo pip3 install "topydo[prompt]"
+mkdir -p $HOME/.config/topydo
+ln -s $HOME/dotfile/topydo/config $HOME/.config/topydo/config
