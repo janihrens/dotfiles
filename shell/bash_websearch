@@ -9,6 +9,15 @@ images() {
     xdg-open "http://www.google.de/search?tbm=isch&hl=en&source=hp&biw=1366&bih=679&q=$search"
 }
 
+# Openstreetmaps search bash function  | Usage: osm <foo>
+osm() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "https://www.openstreetmap.org/search?query=$search"
+}
+
 google() {
     search=""
     for term in $*; do
