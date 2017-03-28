@@ -94,3 +94,5 @@ source $ZSH/oh-my-zsh.sh
 GOPATH=/home/jfi/.go
 export GOPATH
 PATH=$PATH:$GOPATH/bin # Add GOPATH/bin to PATH for scripting
+
+export PATH="$HOME/.cask/bin:$PATH"
