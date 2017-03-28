@@ -68,6 +68,7 @@
 (depends-on "muttrc-mode")
 (depends-on "neotree")
 (depends-on "org-bullets")
+(depends-on "org-journal")
 (depends-on "ox-twbs")
 (depends-on "package-build")
 (depends-on "pallet")
