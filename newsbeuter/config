@@ -8,7 +8,7 @@ color background         white 	 default
 color listnormal         color247 	 default
 color listfocus	         white 	 black	 	standout
 color info 	         yellow  black 	 bold 	#standout
-color listfocus_unread   color235 	 black    	standout
+color listfocus_unread   white 	black  	 	standout
 #color listfocus_unread   color91 	 color235    	standout
 color listnormal_unread  color253 	 default bold
 color article color247 default
