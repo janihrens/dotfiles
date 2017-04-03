@@ -100,6 +100,7 @@
 (depends-on "todotxt")
 (depends-on "todotxt-mode")
 (depends-on "w3m")
+(depends-on "wiki-summary")
 (depends-on "web-mode")
 (depends-on "wgrep")
 (depends-on "wrap-region")

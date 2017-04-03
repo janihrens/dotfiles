@@ -606,15 +606,16 @@ Using the Menu key
        ;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
 #+END_SRC
 
-
+search stuff
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "M-s o") 'helm-occur)
   (global-set-key (kbd "M-s s") 'helm-spotify-plus)
   (global-set-key (kbd "M-s a") 'ace-jump-mode)
   (global-set-key (kbd "M-s g") 'helm-google-suggest)
-       (global-set-key (kbd "C-c h g") 'helm-google-suggest)
+  (global-set-key (kbd "C-c h g") 'helm-google-suggest)
   (global-set-key (kbd "M-s c") 'helm-bbdb)
   (global-set-key (kbd "M-s C") 'bbdb) ;; have this here because of helm delay
+  (global-set-key (kbd "M-s w") 'wiki-summary)
 #+END_SRC
 
 
