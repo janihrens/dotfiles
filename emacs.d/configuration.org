@@ -838,3 +838,8 @@ kill the comilation window when there were no errors
 (setq bbdb-file "~/Dropbox/Sync/bbdb")
 
 #+END_SRC
+* wttrin
+#+BEGIN_SRC emacs-lisp
+(setq wttrin-default-cities '("Eckernförde" "Karlsruhe"))
+(setq wttrin-default-accept-language '("Accept-Language" . "de-DE"))
+#+END_SRC
