@@ -530,7 +530,7 @@ Using the Menu key
        ;;; helm related key chords
   ;; TODO: separate projectile related hotkeys?
       (global-set-key (kbd "C-b") 'helm-buffers-list)
-       (global-set-key (kbd "C-c h g") 'helm-google-suggest)
+
 ;; overloading the default of projectile minor mode
   (define-key projectile-mode-map (kbd "C-c p a") 'helm-projectile-find-other-file)
        (global-unset-key (kbd "C-c h M-s o")) ;; unset complicated helm-occur command
@@ -540,12 +540,24 @@ Using the Menu key
        (global-set-key (kbd "C-x C-f") 'helm-find-files)
        (global-set-key (kbd "C-x b") 'helm-mini)
        (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
-       (global-set-key (kbd "M-s o") 'helm-occur)
        (global-set-key (kbd "M-x") 'helm-M-x)
        (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
        ;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
 #+END_SRC
+
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "M-s o") 'helm-occur)
+  (global-set-key (kbd "M-s s") 'helm-spotify-plus)
+  (global-set-key (kbd "M-s a") 'ace-jump-mode)
+  (global-set-key (kbd "M-s g") 'helm-google-suggest)
+       (global-set-key (kbd "C-c h g") 'helm-google-suggest)
+  (global-set-key (kbd "M-s c") 'helm-bbdb)
+  (global-set-key (kbd "M-s C") 'bbdb) ;; have this here because of helm delay
+#+END_SRC
+
+
 
 #+BEGIN_SRC emacs-lisp
   ;;; non-helm related key chords
@@ -679,3 +691,89 @@ kill the comilation window when there were no errors
 
 #+RESULTS:
 : t
+* mu4e
+#+BEGIN_SRC emacs-lisp
+(require 'mu4e)
+
+;; default
+;; (setq mu4e-maildir "~/Maildir")
+
+(setq mu4e-drafts-folder "/[Google Mail].Drafts")
+(setq mu4e-sent-folder   "/[Google Mail].Sent Mail")
+(setq mu4e-trash-folder  "/[Google Mail].Trash")
+;;(setq mu4e-drafts-folder "/[Gmail].Drafts")
+;;(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
+;;(setq mu4e-trash-folder  "/[Gmail].Trash")
+
+;; don't save message to Sent Messages, Gmail/IMAP takes care of this
+(setq mu4e-sent-messages-behavior 'delete)
+
+;; (See the documentation for `mu4e-sent-messages-behavior' if you have
+;; additional non-Gmail addresses and want assign them different
+;; behavior.)
+
+;; setup some handy shortcuts
+;; you can quickly switch to your Inbox -- press ``ji''
+;; then, when you want archive some messages, move them to
+;; the 'All Mail' folder by pressing ``ma''.
+
+;;(setq mu4e-maildir-shortcuts
+;;    '( ("/INBOX"               . ?i)
+;;       ("/[Gmail].Sent Mail"   . ?s)
+;;       ("/[Gmail].Trash"       . ?t)
+;;       ("/[Gmail].All Mail"    . ?a)))
+
+
+(setq mu4e-maildir-shortcuts
+    '( ("/INBOX"               . ?i)
+       ("/[Google Mail].Sent Mail"   . ?s)
+       ("/[Google Mail].Trash"       . ?t)
+       ("/[Google Mail].All Mail"    . ?a)))
+
+;; allow for updating mail using 'U' in the main view:
+(setq mu4e-get-mail-command "offlineimap")
+
+;; something about ourselves
+(setq
+   user-mail-address "janihrens@gmail.com"
+   user-full-name  "Jan Ihrens"
+   mu4e-compose-signature
+    (concat
+      "Jan Ihrens\n"
+      "http://www.example.com\n"))
+
+;; sending mail -- replace USERNAME with your gmail username
+;; also, make sure the gnutls command line utils are installed
+;; package 'gnutls-bin' in Debian/Ubuntu
+
+(require 'smtpmail)
+(setq message-send-mail-function 'smtpmail-send-it
+   starttls-use-gnutls t
+   smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+   smtpmail-auth-credentials
+     '(("smtp.gmail.com" 587 "janihrens@gmail.com" nil))
+   smtpmail-default-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-service 587)
+
+;; alternatively, for emacs-24 you can use:
+;;(setq message-send-mail-function 'smtpmail-send-it
+;;     smtpmail-stream-type 'starttls
+;;     smtpmail-default-smtp-server "smtp.gmail.com"
+;;     smtpmail-smtp-server "smtp.gmail.com"
+;;     smtpmail-smtp-service 587)
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+#+END_SRC
+* bbdb
+#+BEGIN_SRC emacs-lisp
+(require 'bbdb)
+
+(bbdb-initialize 'gnus 'message)
+(bbdb-insinuate-message)
+(add-hook 'gnus-startup-hook 'bbdb-insinuate-gnus)
+
+(setq bbdb-file "~/Dropbox/Sync/bbdb")
+
+#+END_SRC
