@@ -843,3 +843,9 @@ kill the comilation window when there were no errors
 (setq wttrin-default-cities '("Eckernförde" "Karlsruhe"))
 (setq wttrin-default-accept-language '("Accept-Language" . "de-DE"))
 #+END_SRC
+* emms
+#+BEGIN_SRC emacs-lisp
+        (require 'emms-setup)
+        (emms-standard)
+        (emms-default-players)
+#+END_SRC
