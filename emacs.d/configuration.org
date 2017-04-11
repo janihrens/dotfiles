@@ -826,6 +826,8 @@ kill the comilation window when there were no errors
 
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
+
+(require 'org-mu4e)
 #+END_SRC
 * bbdb
 #+BEGIN_SRC emacs-lisp
