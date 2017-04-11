@@ -33,7 +33,8 @@ apt-get -y install nautilus-dropbox
 apt-get -y install keepass2
 # media
 apt-get -y install vlc livestreamer
-
+# email
+apt-get install mu4e maildir-utils-extra
 # playerctl from github
 PLAYERCTLRLS="https://api.github.com/repos/acrisci/playerctl/releases"
 DLURL=$(curl -s $PLAYERCTLRLS | grep browser_download_url | grep .deb | head -n 1 | cut -d '"' -f 4)
