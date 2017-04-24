@@ -499,8 +499,10 @@ makes that automatic.
        ;; # -*- buffer-auto-save-file-name: nil; -*-
 #+END_SRC
 
+do not automatically encrypt journal entries.
+otherwise set 1 instead of nil.
 #+BEGIN_SRC emacs-lisp
-(setq org-journal-enable-encryption 1)
+(setq org-journal-enable-encryption nil)
 #+END_SRC
 
 * engine-mode
@@ -623,7 +625,7 @@ search stuff
 #+BEGIN_SRC emacs-lisp
   ;;; non-helm related key chords
   (global-set-key (kbd "<f6>") 'flyspell-mode)
-  (global-set-key (kbd "C-,") 'hippie-expand)
+  (global-set-key (kbd "C-ä") 'hippie-expand)
   (global-set-key (kbd "C-.") 'er/expand-region)
   (global-set-key (kbd "C-:") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-;") 'mc/mark-previous-like-this)
