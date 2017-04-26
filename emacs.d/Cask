@@ -2,6 +2,7 @@
 (source gnu)
 (source melpa)
 
+
 (depends-on "ac-math")
 (depends-on "ace-jump-mode")
 (depends-on "ag")
@@ -90,6 +91,7 @@
 (depends-on "pallet")
 (depends-on "paper-theme")
 (depends-on "paredit")
+(depends-on "pdf-tools")
 (depends-on "powerline")
 (depends-on "professional-theme")
 (depends-on "projectile")
