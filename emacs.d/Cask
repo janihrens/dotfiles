@@ -2,7 +2,6 @@
 (source gnu)
 (source melpa)
 
-
 (depends-on "ac-math")
 (depends-on "ace-jump-mode")
 (depends-on "ag")
@@ -47,6 +46,7 @@
 (depends-on "flymake-google-cpplint")
 (depends-on "folding")
 (depends-on "geiser")
+(depends-on "ggtags")
 (depends-on "ghc")
 (depends-on "gnuplot")
 (depends-on "google-c-style")
@@ -61,6 +61,7 @@
 (depends-on "helm-dictionary")
 (depends-on "helm-firefox")
 (depends-on "helm-google")
+(depends-on "helm-gtags")
 (depends-on "helm-package")
 (depends-on "helm-projectile")
 (depends-on "helm-spotify-plus")
