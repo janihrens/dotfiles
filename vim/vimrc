@@ -58,6 +58,7 @@ set autoindent
 filetype plugin on
 let g:tex_flavor='latex'
 
+set colorcolumn=80
 "set textwidth=80
 set hlsearch
 set number
