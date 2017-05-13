@@ -85,21 +85,21 @@ I use =cask= and =pallet= for managing packages.
 
 # Use =evil=.
 
-# #+BEGIN_SRC emacs-lisp
-#   (evil-mode 1)
-# #+END_SRC
+#+BEGIN_SRC emacs-lisp
+  (evil-mode 1)
+#+END_SRC
 
 # Enable =surround= everywhere.
 
-# #+BEGIN_SRC emacs-lisp
-#   (global-evil-surround-mode 1)
-# #+END_SRC
+#+BEGIN_SRC emacs-lisp
+  (global-evil-surround-mode 1)
+#+END_SRC
 
 # Bind =C-p= to fuzzy-finding files in the current project.
 
-# #+BEGIN_SRC emacs-lisp
-#   (define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
-# #+END_SRC
+#+BEGIN_SRC emacs-lisp
+  (define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
+#+END_SRC
 
 * Helm mode
  #+BEGIN_SRC emacs-lisp
@@ -605,7 +605,7 @@ Using the Menu key
        (global-set-key (kbd "M-x") 'helm-M-x)
        (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
-       ;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
+	;;(global-set-key (kbd "<f8>") 'helm-imenu-anywhere)
 #+END_SRC
 
 search stuff
@@ -625,7 +625,7 @@ search stuff
 #+BEGIN_SRC emacs-lisp
   ;;; non-helm related key chords
   (global-set-key (kbd "<f6>") 'flyspell-mode)
-  (global-set-key (kbd "C-ä") 'hippie-expand)
+  (global-set-key (kbd "M-<Tab>") 'hippie-expand)
   (global-set-key (kbd "C-.") 'er/expand-region)
   (global-set-key (kbd "C-:") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-;") 'mc/mark-previous-like-this)
