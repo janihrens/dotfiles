@@ -44,6 +44,9 @@ ln -s ~/dotfiles/shell/zshrc ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+#tmux
+ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+
 sudo pip install "jrnl[encrypted]"
 ln -s ~/Dropbox/Sync/jrnl/jrnl_config .jrnl_config
 
