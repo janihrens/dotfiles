@@ -31,6 +31,7 @@ Plugin 'sheerun/vim-wombat-scheme'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/Wombat'
 Plugin 'tomasr/molokai'
+Plugin 'dikiaap/minimalist'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'https://github.com/vim-latex/vim-latex.git'
@@ -72,7 +73,9 @@ set relativenumber
 set foldmethod=syntax
 
 " colorscheme
-colorscheme koehler
+"colorscheme koehler
+set t_Co=256
+colorscheme minimalist
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=#242424
 
