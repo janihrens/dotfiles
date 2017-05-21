@@ -93,3 +93,8 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 "python3 from powerline.vim import setup as powerline_setup
 "python3 powerline_setup()
 "python3 del powerline_setup
+
+"recompile latex in background upon saving
+autocmd BufWritePost *.tex :silent exec '!pdflatex -interaction nonstopmode % > /dev/null'  | redraw!
+
+
