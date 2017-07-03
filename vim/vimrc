@@ -1,6 +1,5 @@
 " Leader
 let mapleader = " "
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -28,17 +27,16 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'sheerun/vim-wombat-scheme'
-"Plugin 'lervag/vimtex'
+Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/Wombat'
 Plugin 'tomasr/molokai'
 Plugin 'dikiaap/minimalist'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'https://github.com/vim-latex/vim-latex.git'
-"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Plugin 'lervag/vimtex'
+"Plugin 'https://github.com/vim-latex/vim-latex.git'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -90,11 +88,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 nnoremap <leader>t :NERDTreeToggle<CR> 
+nmap <F3> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 "nnoremap <F12> :NERDTreeToggle<CR> 
 "python3 from powerline.vim import setup as powerline_setup
 "python3 powerline_setup()
 "python3 del powerline_setup
-
+let g:ycm_python_binary_path = '/usr/bin/python3'
 "recompile latex in background upon saving
 autocmd BufWritePost *.tex :silent exec '!pdflatex -interaction nonstopmode % > /dev/null'  | redraw!
 
