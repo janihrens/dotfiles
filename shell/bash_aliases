@@ -8,7 +8,7 @@ alias agug="sudo apt-get upgrade"
 alias ags="apt-cache search"
 alias agi="sudo apt-get install"
 
-alias t=todo.sh
+alias todo=todo.sh
 
 # Move dirs
 alias ..='cd ..'
