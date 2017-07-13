@@ -36,8 +36,10 @@ Plugin 'dikiaap/minimalist'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'https://github.com/vim-latex/vim-latex.git'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Plugin 'lervag/vimtex'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,10 +75,17 @@ set number
 set relativenumber
 set foldmethod=syntax
 
+"airline
+set laststatus=2
+"
 " colorscheme
 "colorscheme koehler
 set t_Co=256
 colorscheme minimalist
+let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=#242424
 
