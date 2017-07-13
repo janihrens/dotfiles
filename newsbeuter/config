@@ -26,8 +26,8 @@ highlight article     ":.*\\(image\\)$"                     color72  default
 show-read-articles no
 show-read-feeds no
 browser qutebrowser %u
-player umpv
-macro y set browser "umpv %u &"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
+player mpv
+macro y set browser "mpv --no-terminal %u &"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
 macro e set browser "extractor %u"; open-in-browser ; set browser "qutebrowser %u"; toggle-article-read "read"
 macro o open-in-browser ; toggle-article-read "read"
 macro i open-in-browser "http://www.imdb.com/find?q=%t"
