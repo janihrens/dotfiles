@@ -42,13 +42,13 @@ text-width 85
 datetime-format "%d.%m.%Y, %R"
 
 # refresh feeds every 15 minutes
-auto-reload yes
+auto-reload no 
 refresh-on-startup no
 reload-time 15
 reload-threads 16
 
 # saving and bookmarking
-# max-items 40
+max-items 150
 save-path "~/Dropbox/Sync/newsbeuter/Saved Articles/"
 bookmark-cmd "~/Dropbox/Sync/newsbeuter/send-to-pocket.sh"
 
