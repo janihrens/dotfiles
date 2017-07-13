@@ -37,6 +37,7 @@
 (depends-on "epl")
 (depends-on "ergoemacs-mode")
 (depends-on "evil")
+(depends-on "evil-mu4e")
 (depends-on "evil-surround")
 (depends-on "f")
 (depends-on "fill-column-indicator")

@@ -1,6 +1,5 @@
 " Leader
 let mapleader = " "
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -28,7 +27,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'sheerun/vim-wombat-scheme'
-"Plugin 'lervag/vimtex'
+Plugin 'lervag/vimtex'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/Wombat'
 Plugin 'tomasr/molokai'
@@ -75,17 +74,10 @@ set number
 set relativenumber
 set foldmethod=syntax
 
-"airline
-set laststatus=2
-"
 " colorscheme
 "colorscheme koehler
 set t_Co=256
 colorscheme minimalist
-let g:airline_theme='minimalist'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=#242424
 
