@@ -11,10 +11,11 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # setup displays
-exec_always xrandr --output VGA-1 --primary --auto --right-of DVI-0
+exec_always xrandr --output VGA-1 --primary --auto 
+#exec_always xrandr --output VGA-1 --primary --auto --right-of DVI-0
 exec_always xset s --off
 # set background
-exec feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
+exec_always feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
 
 # mount storage drive before starting dropbox
 exec gvfs-mount -d /dev/sdb5

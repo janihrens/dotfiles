@@ -13,8 +13,11 @@
 
 * org custom agenda
 #+BEGIN_SRC emacs-lisp
- (setq org-agenda-files '("~/org/"))
-
+ (setq org-agenda-files '("~/org" "~/org/kit" "~/org/hiwi"))
+ ;;(setq org-agenda-files '("~/Dropbox/notes/gtd.org"))
+ (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
+ (setq org-refile-use-outline-path 'file)
+(setq org-outline-path-complete-in-steps nil)
 (defun air-org-skip-subtree-if-priority (priority)
   "Skip an agenda subtree if it has a priority of PRIORITY.
 
