@@ -299,3 +299,20 @@ getallfiles(){
     TYPE="$2"
     wget --quiet --show-progress --no-directories --content-disposition --restrict-file-names=nocontrol -e robots=off -A$TYPE -r $URL
 }
+
+
+rd()
+{
+  # can pipe output to less or cat
+  elinks "http://justread.mpgarate.com/read?url=$1"
+}
+
+rd_w3m()
+{
+  w3m "http://justread.mpgarate.com/read?url=$1"
+}
+
+rd_curl()
+{
+  curl -s "$1" | html2text -utf8 -style pretty
+}
