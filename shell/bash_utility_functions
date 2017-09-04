@@ -300,10 +300,6 @@ getallfiles(){
     wget --quiet --show-progress --no-directories --content-disposition --restrict-file-names=nocontrol -e robots=off -A$TYPE -r $URL
 }
 
-spell() {
-    local candidates oldifs word array_pos
-        oldifs="$IFS"
-            IFS=':'
 
 rd()
 {
