@@ -61,7 +61,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 bindsym $mod+x exec rofi -show window
 bindsym $mod+b exec ~/software/buku_run/buku_run
-bindsym $mod+slash exec ~/bin/rofi-websearch
+bindsym $mod+Shift+slash exec ~/bin/rofi-websearch
 # https://help.ubuntu.com/community/GtkComposeTable
 #
 #
