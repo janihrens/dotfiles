@@ -92,6 +92,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 nnoremap <leader>t :NERDTreeToggle<CR> 
+nnoremap <leader>r :w<CR>:!./%<CR>
+
 "nnoremap <F12> :NERDTreeToggle<CR> 
 "python3 from powerline.vim import setup as powerline_setup
 "python3 powerline_setup()
