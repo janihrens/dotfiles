@@ -18,6 +18,14 @@ osm() {
     xdg-open "https://www.openstreetmap.org/search?query=$search"
 }
 
+maps() {
+    search=""
+    for term in $*; do
+        search="$search%20$term"
+    done
+    xdg-open "https://www.google.de/maps/search/$search"
+}
+
 google() {
     search=""
     for term in $*; do
