@@ -18,7 +18,8 @@ exec_always xset s --off
 exec_always feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
 
 # mount storage drive before starting dropbox
-exec gvfs-mount -d /dev/sdb5
+exec udiskie 
+#exec gvfs-mount -d /dev/sdb5
 exec dropbox start
 exec nm-applet  # networkmanager applet
 
