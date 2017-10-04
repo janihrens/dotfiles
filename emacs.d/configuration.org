@@ -11,6 +11,13 @@
 ;(desktop-save-mode 1)
 #+END_SRC
 
+* org clock to drawer
+#+BEGIN_SRC emacs-lisp
+(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))     ;; Separate drawers for clocking and logs
+(setq org-clock-into-drawer t)    ;; Save clock data and state changes and notes in the LOGBOOK drawer
+#+END_SRC
+
+
 * org custom agenda
 #+BEGIN_SRC emacs-lisp
  (setq org-agenda-files '("~/org" "~/org/kit"))
