@@ -92,8 +92,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 nnoremap tn :tabnew<CR>
-nnoremap tj :tabnext<CR>
-nnoremap tk :tabprev<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
