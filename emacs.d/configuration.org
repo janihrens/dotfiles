@@ -777,7 +777,7 @@ kill the comilation window when there were no errors
 (require 'mu4e)
 
 ;; default
-;; (setq mu4e-maildir "~/.mail")
+(setq mu4e-maildir "~/.mail")
 
 (setq mu4e-drafts-folder "/[Google Mail].Drafts")
 (setq mu4e-sent-folder   "/[Google Mail].Sent Mail")
@@ -820,8 +820,7 @@ kill the comilation window when there were no errors
    user-full-name  "Jan Ihrens"
    mu4e-compose-signature
     (concat
-      "Jan Ihrens\n"
-      "http://www.example.com\n"))
+      "Jan Ihrens"))
 
 ;; sending mail -- replace USERNAME with your gmail username
 ;; also, make sure the gnutls command line utils are installed
