@@ -298,5 +298,5 @@ bar {
 	# status_command py3status -c ~/.i3/i3status.conf --include ~/.i3
 	font pango:DejaVu Sans Mono, Icons 8
 	status_command i3blocks
-        tray_output primary
+#        tray_output primary
 }
