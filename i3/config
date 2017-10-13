@@ -17,6 +17,7 @@ exec_always xset s --off
 # set background
 exec_always feh --bg-fill ~/Dropbox/Sync/242424-2560x1440.png
 
+exec guake
 # mount storage drive before starting dropbox
 exec udiskie 
 #exec gvfs-mount -d /dev/sdb5
