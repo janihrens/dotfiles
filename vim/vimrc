@@ -113,7 +113,8 @@ nnoremap <leader>f :YcmCompleter GoToc<CR>
 nnoremap <leader>d :YcmCompleter GetDoc<CR> 
 nnoremap <leader>o :only<CR> 
 nnoremap <leader>t :NERDTreeToggle<CR> 
-nnoremap <leader>r :w<CR>:!./%<CR>
+" quick run
+nnoremap <leader>r :w<CR>:!./%<CR><CR>
 
 "nnoremap <F12> :NERDTreeToggle<CR> 
 "python3 from powerline.vim import setup as powerline_setup
