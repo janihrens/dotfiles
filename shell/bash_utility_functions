@@ -316,3 +316,9 @@ rd_curl()
 {
   curl -s "$1" | html2text -utf8 -style pretty
 }
+
+qr()
+{
+  qrencode -o /tmp/qr.png "$@"
+  xdg-open /tmp/qr.png
+}
