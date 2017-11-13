@@ -319,6 +319,7 @@ rd_curl()
 
 qr()
 {
-  qrencode -o /tmp/qr.png "$@"
-  xdg-open /tmp/qr.png
+  file="/tmp/qr.png"
+  qrencode -o $file "$@"
+  xdg-open $file
 }
