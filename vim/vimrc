@@ -76,8 +76,13 @@ filetype plugin on
 let g:tex_flavor='latex'
 
 "set textwidth=80
-"set hlsearch
-set ignorecase
+
+" search settings
+set hlsearch   " highlignt matches
+set incsearch  " search while typing
+set ignorecase " ignore case
+set smartcase  " unless explicitly uppercase
+
 set number
 set relativenumber
 set foldmethod=syntax
