@@ -38,6 +38,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'https://github.com/vim-latex/vim-latex.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'python-mode/python-mode'
 "Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Plugin 'lervag/vimtex'
