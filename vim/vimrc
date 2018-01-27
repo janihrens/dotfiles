@@ -1,4 +1,3 @@
-" Leader
 let mapleader = " "
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -132,6 +131,13 @@ nnoremap <leader>e. :vsplit ~/.vimrc<CR>
 nnoremap <leader>s. :source ~/.vimrc<CR>
 " quick run
 nnoremap <leader>r :w<CR>:!./%<CR><CR>
+
+" These are needed because of the annoyances of the german keyboard layout
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
 
 "nnoremap <F12> :NERDTreeToggle<CR> 
 "python3 from powerline.vim import setup as powerline_setup
