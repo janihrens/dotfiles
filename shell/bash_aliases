@@ -29,3 +29,6 @@ alias reload='. ~/.bashrc'
 
 alias c='wcalc'
 
+
+# quit vim style
+alias :q=exit
