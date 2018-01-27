@@ -24,11 +24,13 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
+Plugin 'falstro/ghost-text-vim.git'
 Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'majutsushi/tagbar'
 Plugin 'sheerun/vim-wombat-scheme'
 Plugin 'lervag/vimtex'
+Plugin 'tpope/vim-jdaddy'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/Wombat'
 Plugin 'tomasr/molokai'
