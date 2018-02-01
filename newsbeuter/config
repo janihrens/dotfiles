@@ -47,7 +47,7 @@ datetime-format "%d.%m.%Y, %R"
 auto-reload no 
 refresh-on-startup no
 reload-time 15
-reload-threads 16
+reload-threads 200
 
 # saving and bookmarking
 max-items 150
