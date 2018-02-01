@@ -32,3 +32,4 @@ alias c='wcalc'
 
 # quit vim style
 alias :q=exit
+alias e=exit
