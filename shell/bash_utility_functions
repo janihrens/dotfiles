@@ -301,18 +301,18 @@ getallfiles(){
 }
 
 
-rd()
+read_elinks()
 {
   # can pipe output to less or cat
   elinks "http://justread.mpgarate.com/read?url=$1"
 }
 
-rd_w3m()
+read_w3m()
 {
   w3m "http://justread.mpgarate.com/read?url=$1"
 }
 
-rd_curl()
+read_curl()
 {
   curl -s "$1" | html2text -utf8 -style pretty
 }
