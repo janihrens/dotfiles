@@ -87,7 +87,7 @@ set smartcase  " unless explicitly uppercase
 
 set number
 set relativenumber
-set foldmethod=syntax
+" set foldmethod=syntax
 
 " colorscheme
 "colorscheme koehler
@@ -99,6 +99,7 @@ set colorcolumn=80
 set splitbelow
 set splitright
 set mouse=a
+set linebreak  " break at whitespace for readability
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
