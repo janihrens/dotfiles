@@ -75,6 +75,9 @@ set shiftround
 set expandtab
 set autoindent
 
+set iskeyword-=_  " treat _ as word seperator
+
+
 filetype plugin on
 let g:tex_flavor='latex'
 
