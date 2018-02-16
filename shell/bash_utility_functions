@@ -15,9 +15,9 @@
 # Automatically do an ls after each cd
 cd() {
   if [ -n "$1" ]; then
-    builtin cd "$@" && ls --group-directories-first --color=auto
+    builtin cd "$@" && ls 
   else
-    builtin cd ~ && ls --group-directories-first --color=auto
+    builtin cd ~ && ls 
   fi
 }
 
