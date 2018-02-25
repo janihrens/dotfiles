@@ -50,7 +50,7 @@ reload-time 15
 reload-threads 200
 
 # saving and bookmarking
-max-items 150
+#max-items 150
 save-path "~/Dropbox/Sync/newsbeuter/Saved Articles/"
 bookmark-cmd "~/Dropbox/Sync/newsbeuter/send-to-pocket.sh"
 
